@@ -7,33 +7,35 @@ namespace ClasesBase
 {
     class Producto
     {
-        private string Prod_Codigo;
-        private string Prod_Categoria;
-        private string Prod_Descripcion;
-        private decimal Prod_Precio;
+        private string prod_Codigo;
 
-        public string Prod_Codigo1
+        public string Prod_Codigo
         {
-            get { return Prod_Codigo; }
-            set { Prod_Codigo = value; }
+            get { return prod_Codigo; }
+            set { prod_Codigo = value; }
         }
+        private string prod_Categoria;
 
-        public string Prod_Categoria1
+        public string Prod_Categoria
         {
-            get { return Prod_Categoria; }
-            set { Prod_Categoria = value; }
+            get { return prod_Categoria; }
+            set { prod_Categoria = value; }
         }
+        private string prod_Descripcion;
 
-        public string Prod_Descripcion1
+        public string Prod_Descripcion
         {
-            get { return Prod_Descripcion; }
-            set { Prod_Descripcion = value; }
+            get { return prod_Descripcion; }
+            set { prod_Descripcion = value; }
         }
+        private double prod_Precio;
 
-        public decimal Prod_Precio1
+        public double Prod_Precio
         {
-            get { return Prod_Precio; }
-            set { Prod_Precio = value; }
+            get { return prod_Precio; }
+            set { prod_Precio = value; }
         }
+        
+        
     }
 }

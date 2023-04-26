@@ -7,35 +7,34 @@ namespace ClasesBase
 {
     class Usuario
     {
-        private int Usu_ID;
-        private string Usu_NombreUsuario;
-        private string Usu_Contraseña;
-        private string Usu_ApellidoNombre;
+        private int usu_ID;
 
-        public int Usu_ID1
+        public int Usu_ID
         {
-            get { return Usu_ID; }
-            set { Usu_ID = value; }
+            get { return usu_ID; }
+            set { usu_ID = value; }
         }
+        private string usu_NombreUsuario;
 
-        public string Usu_NombreUsuario1
+        public string Usu_NombreUsuario
         {
-            get { return Usu_NombreUsuario; }
-            set { Usu_NombreUsuario = value; }
+            get { return usu_NombreUsuario; }
+            set { usu_NombreUsuario = value; }
         }
+        private string usu_Contraseña;
 
-        public string Usu_Contraseña1
+        public string Usu_Contraseña
         {
-            get { return Usu_Contraseña; }
-            set { Usu_Contraseña = value; }
+            get { return usu_Contraseña; }
+            set { usu_Contraseña = value; }
         }
-        
+        private string usu_ApellidoNombre;
 
-        public string Usu_ApellidoNombre1
+        public string Usu_ApellidoNombre
         {
-            get { return Usu_ApellidoNombre; }
-            set { Usu_ApellidoNombre = value; }
+            get { return usu_ApellidoNombre; }
+            set { usu_ApellidoNombre = value; }
         }
-
     }
+
 }

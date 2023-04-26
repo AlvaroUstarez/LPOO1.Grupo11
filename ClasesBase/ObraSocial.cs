@@ -7,35 +7,34 @@ namespace ClasesBase
 {
     class ObraSocial
     {
-        private string OS_CUIT;
-        private string OS_RazonSocial;
-        private string OS_Direccion;
-        private string OS_Telefono;
+        private string os_Cuit;
 
-        public string OS_CUIT1
+        public string Os_Cuit
         {
-            get { return OS_CUIT; }
-            set { OS_CUIT = value; }
+            get { return os_Cuit; }
+            set { os_Cuit = value; }
+        }
+        private string os_RazonSocial;
+
+        public string Os_RazonSocial
+        {
+            get { return os_RazonSocial; }
+            set { os_RazonSocial = value; }
         }
 
-        public string OS_RazonSocial1
+        private string os_Direccion;
+
+        public string Os_Direccion
         {
-            get { return OS_RazonSocial; }
-            set { OS_RazonSocial = value; }
+            get { return os_Direccion; }
+            set { os_Direccion = value; }
         }
+        private string os_Telefono;
 
-        public string OS_Direccion1
+        public string Os_Telefono
         {
-            get { return OS_Direccion; }
-            set { OS_Direccion = value; }
+            get { return os_Telefono; }
+            set { os_Telefono = value; }
         }
-
-        public string OS_Telefono1
-        {
-            get { return OS_Telefono; }
-            set { OS_Telefono = value; }
-        }
-
-
     }
 }
