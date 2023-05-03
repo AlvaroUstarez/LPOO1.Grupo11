@@ -44,7 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.guardar = new System.Windows.Forms.Button();
+            this.btnSaveUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFrmUser)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.buscar.TabIndex = 1;
             this.buscar.Text = "Buscar";
             this.buscar.UseVisualStyleBackColor = true;
-            this.buscar.Click += new System.EventHandler(this.button1_Click);
+            this.buscar.Click += new System.EventHandler(this.buttonBuscarFRM);
             // 
             // textBox1
             // 
@@ -66,6 +66,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(377, 20);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.tbBuscarFRM);
             // 
             // dataGridViewFrmUser
             // 
@@ -176,7 +177,7 @@
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(160, 20);
             this.textBoxApellido.TabIndex = 3;
-            this.textBoxApellido.TextChanged += new System.EventHandler(this.textBoxApellido_TextChanged);
+            this.textBoxApellido.TextChanged += new System.EventHandler(this.textBoxApellido);
             // 
             // label2
             // 
@@ -203,7 +204,7 @@
             this.comboBoxRol.Name = "comboBoxRol";
             this.comboBoxRol.Size = new System.Drawing.Size(160, 21);
             this.comboBoxRol.TabIndex = 1;
-            this.comboBoxRol.SelectedIndexChanged += new System.EventHandler(this.comboBoxRol_SelectedIndexChanged);
+            this.comboBoxRol.SelectedIndexChanged += new System.EventHandler(this.comboBoxRol_FRM);
             // 
             // label1
             // 
@@ -215,21 +216,22 @@
             this.label1.Text = "Rol";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // guardar
+            // btnSaveUser
             // 
-            this.guardar.Location = new System.Drawing.Point(786, 370);
-            this.guardar.Name = "guardar";
-            this.guardar.Size = new System.Drawing.Size(68, 24);
-            this.guardar.TabIndex = 5;
-            this.guardar.Text = "Guardar";
-            this.guardar.UseVisualStyleBackColor = true;
+            this.btnSaveUser.Location = new System.Drawing.Point(786, 370);
+            this.btnSaveUser.Name = "btnSaveUser";
+            this.btnSaveUser.Size = new System.Drawing.Size(68, 24);
+            this.btnSaveUser.TabIndex = 5;
+            this.btnSaveUser.Text = "Guardar";
+            this.btnSaveUser.UseVisualStyleBackColor = true;
+            this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
             // 
             // Frm_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(908, 467);
-            this.Controls.Add(this.guardar);
+            this.Controls.Add(this.btnSaveUser);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewFrmUser);
             this.Controls.Add(this.textBox1);
@@ -262,6 +264,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxApellido;
         private System.Windows.Forms.TextBox textBoxContra;
-        private System.Windows.Forms.Button guardar;
+        private System.Windows.Forms.Button btnSaveUser;
     }
 }
