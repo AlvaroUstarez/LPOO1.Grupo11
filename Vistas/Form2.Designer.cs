@@ -28,68 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buscar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridViewFrmUser = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtSearchUser = new System.Windows.Forms.TextBox();
+            this.dgwUsuarios = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxContra = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxUsuario = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxApellido = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxRol = new System.Windows.Forms.ComboBox();
+            this.cmbRol = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSaveUser = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFrmUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwUsuarios)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buscar
+            // btnBuscar
             // 
-            this.buscar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buscar.Location = new System.Drawing.Point(467, 24);
-            this.buscar.Name = "buscar";
-            this.buscar.Size = new System.Drawing.Size(90, 20);
-            this.buscar.TabIndex = 1;
-            this.buscar.Text = "Buscar";
-            this.buscar.UseVisualStyleBackColor = true;
-            this.buscar.Click += new System.EventHandler(this.buttonBuscarFRM);
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnBuscar.Location = new System.Drawing.Point(467, 24);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(90, 20);
+            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // textBox1
+            // txtSearchUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(76, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(377, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.tbBuscarFRM);
+            this.txtSearchUser.Location = new System.Drawing.Point(76, 24);
+            this.txtSearchUser.Name = "txtSearchUser";
+            this.txtSearchUser.Size = new System.Drawing.Size(377, 20);
+            this.txtSearchUser.TabIndex = 2;
             // 
-            // dataGridViewFrmUser
+            // dgwUsuarios
             // 
-            this.dataGridViewFrmUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewFrmUser.Location = new System.Drawing.Point(55, 112);
-            this.dataGridViewFrmUser.Name = "dataGridViewFrmUser";
-            this.dataGridViewFrmUser.Size = new System.Drawing.Size(473, 242);
-            this.dataGridViewFrmUser.TabIndex = 3;
-            this.dataGridViewFrmUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFrmUser_CellContentClick);
+            this.dgwUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwUsuarios.Location = new System.Drawing.Point(22, 112);
+            this.dgwUsuarios.Name = "dgwUsuarios";
+            this.dgwUsuarios.Size = new System.Drawing.Size(532, 242);
+            this.dgwUsuarios.TabIndex = 3;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBoxContra);
+            this.groupBox1.Controls.Add(this.txtContraseña);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBoxUsuario);
-            this.groupBox1.Controls.Add(this.textBoxEmail);
+            this.groupBox1.Controls.Add(this.txtUsuario);
+            this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBoxNombre);
+            this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBoxApellido);
+            this.groupBox1.Controls.Add(this.txtApellido);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBoxRol);
+            this.groupBox1.Controls.Add(this.cmbRol);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(560, 112);
             this.groupBox1.Name = "groupBox1";
@@ -98,12 +96,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Usuario";
             // 
-            // textBoxContra
+            // txtContraseña
             // 
-            this.textBoxContra.Location = new System.Drawing.Point(98, 192);
-            this.textBoxContra.Name = "textBoxContra";
-            this.textBoxContra.Size = new System.Drawing.Size(160, 20);
-            this.textBoxContra.TabIndex = 11;
+            this.txtContraseña.Location = new System.Drawing.Point(98, 192);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(160, 20);
+            this.txtContraseña.TabIndex = 11;
             // 
             // label6
             // 
@@ -114,19 +112,19 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Contraseña";
             // 
-            // textBoxUsuario
+            // txtUsuario
             // 
-            this.textBoxUsuario.Location = new System.Drawing.Point(98, 160);
-            this.textBoxUsuario.Name = "textBoxUsuario";
-            this.textBoxUsuario.Size = new System.Drawing.Size(160, 20);
-            this.textBoxUsuario.TabIndex = 9;
+            this.txtUsuario.Location = new System.Drawing.Point(98, 160);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(160, 20);
+            this.txtUsuario.TabIndex = 9;
             // 
-            // textBoxEmail
+            // txtEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(98, 127);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(160, 20);
-            this.textBoxEmail.TabIndex = 8;
+            this.txtEmail.Location = new System.Drawing.Point(98, 127);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(160, 20);
+            this.txtEmail.TabIndex = 8;
             // 
             // label5
             // 
@@ -146,12 +144,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Email";
             // 
-            // textBoxNombre
+            // txtNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(98, 94);
-            this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(160, 20);
-            this.textBoxNombre.TabIndex = 5;
+            this.txtNombre.Location = new System.Drawing.Point(98, 94);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(160, 20);
+            this.txtNombre.TabIndex = 5;
             // 
             // label3
             // 
@@ -162,12 +160,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Nombre";
             // 
-            // textBoxApellido
+            // txtApellido
             // 
-            this.textBoxApellido.Location = new System.Drawing.Point(98, 58);
-            this.textBoxApellido.Name = "textBoxApellido";
-            this.textBoxApellido.Size = new System.Drawing.Size(160, 20);
-            this.textBoxApellido.TabIndex = 3;
+            this.txtApellido.Location = new System.Drawing.Point(98, 58);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(160, 20);
+            this.txtApellido.TabIndex = 3;
             // 
             // label2
             // 
@@ -178,22 +176,21 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Apellido";
             // 
-            // comboBoxRol
+            // cmbRol
             // 
-            this.comboBoxRol.AutoCompleteCustomSource.AddRange(new string[] {
+            this.cmbRol.AutoCompleteCustomSource.AddRange(new string[] {
             "Administrador",
             "Operador",
             "Auditor"});
-            this.comboBoxRol.FormattingEnabled = true;
-            this.comboBoxRol.Items.AddRange(new object[] {
+            this.cmbRol.FormattingEnabled = true;
+            this.cmbRol.Items.AddRange(new object[] {
             "Administrador",
             "Operador",
             "Auditor"});
-            this.comboBoxRol.Location = new System.Drawing.Point(98, 26);
-            this.comboBoxRol.Name = "comboBoxRol";
-            this.comboBoxRol.Size = new System.Drawing.Size(160, 21);
-            this.comboBoxRol.TabIndex = 1;
-            this.comboBoxRol.SelectedIndexChanged += new System.EventHandler(this.comboBoxRol_FRM);
+            this.cmbRol.Location = new System.Drawing.Point(98, 26);
+            this.cmbRol.Name = "cmbRol";
+            this.cmbRol.Size = new System.Drawing.Size(160, 21);
+            this.cmbRol.TabIndex = 1;
             // 
             // label1
             // 
@@ -221,12 +218,13 @@
             this.ClientSize = new System.Drawing.Size(908, 467);
             this.Controls.Add(this.btnSaveUser);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridViewFrmUser);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.buscar);
+            this.Controls.Add(this.dgwUsuarios);
+            this.Controls.Add(this.txtSearchUser);
+            this.Controls.Add(this.btnBuscar);
             this.Name = "Frm_User";
             this.Text = "Frm_User";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFrmUser)).EndInit();
+            this.Load += new System.EventHandler(this.Frm_User_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgwUsuarios)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -236,22 +234,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buscar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridViewFrmUser;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtSearchUser;
+        private System.Windows.Forms.DataGridView dgwUsuarios;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBoxRol;
+        private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxUsuario;
-        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxApellido;
-        private System.Windows.Forms.TextBox textBoxContra;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button btnSaveUser;
     }
 }

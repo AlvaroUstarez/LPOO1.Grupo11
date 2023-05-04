@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace ClasesBase
 {
-    class TrabajarUsuario
+    public class TrabajarUsuario
     {
         public static DataTable list_roles(){
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
@@ -35,14 +35,16 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Usuario(rol_id,usu_NombreUsuario,usu_Contraseña,usu_ApellidoNombre) values(@rol,@nombre_usuario,@contraseña,@apellido_nombre)";
+            cmd.CommandText = "INSERT INTO Usuario(rol_Codigo,usu_NombreUsuario,usu_Contraseña,usu_ApellidoNombre, usu_Email) values(@rol,@nombre_usuario,@contraseña,@apellido_nombre, @email)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
-            cmd.Parameters.AddWithValue("@rol", user.Rol_Id);
-            cmd.Parameters.AddWithValue("@nombre_usuario", user.Rol_Id);
-            cmd.Parameters.AddWithValue("@contraseña", user.Rol_Id);
-            cmd.Parameters.AddWithValue("@apellido_nombre", user.Rol_Id);
+            cmd.Parameters.AddWithValue("@rol", user.Rol_Codigo);
+            cmd.Parameters.AddWithValue("@nombre_usuario", user.Usu_NombreUsuario);
+            cmd.Parameters.AddWithValue("@contraseña", user.Usu_Contraseña);
+            cmd.Parameters.AddWithValue("@apellido_nombre", user.Usu_ApellidoNombre);
+            cmd.Parameters.AddWithValue("@email", user.Usu_Email);
+
 
             cnn.Open();
             cmd.ExecuteNonQuery();
@@ -50,18 +52,19 @@ namespace ClasesBase
 
         }
 
-        public static DataTable list_usuairos()
+        public static DataTable list_usuarios()
         {
 
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "Select";
-            cmd.CommandText += " rol_descripcion as 'Rol', ";
+            cmd.CommandText += " rol_descripcion as 'rol', ";
             cmd.CommandText += " usu_NombreUsuario as 'Usuario', usu_Contraseña as 'Contraseña', ";
-            cmd.CommandText += " usu_ApellidoNombre as 'Apellido y Nombre'";
+            cmd.CommandText += " usu_ApellidoNombre as 'Apellido y Nombre',";
+            cmd.CommandText += " Usu_Email as 'Email'";
             cmd.CommandText += " FROM Usuario as U";
-            cmd.CommandText += " LEFT JOIN Roles as R ON (R.rol_id=U.rol_id)";
+            cmd.CommandText += " LEFT JOIN Roles as R ON (R.rol_Codigo=U.rol_Codigo)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
@@ -84,9 +87,11 @@ namespace ClasesBase
             cmd.CommandText = "Select";
             cmd.CommandText += " rol_descripcion as 'Rol', ";
             cmd.CommandText += " usu_NombreUsuario as 'Usuario', usu_Contraseña as 'Contraseña', ";
-            cmd.CommandText += " usu_ApellidoNombre as 'Apellido y Nombre'";
+            cmd.CommandText += " usu_ApellidoNombre as 'Apellido y Nombre',";
+            cmd.CommandText += " Usu_Email as 'Email'";
+
             cmd.CommandText += " FROM Usuario as U";
-            cmd.CommandText += " LEFT JOIN Roles as R ON (R.rol_id=U.rol_id)";
+            cmd.CommandText += " LEFT JOIN Roles as R ON (R.rol_Codigo=U.rol_Codigo)";
 
             cmd.CommandText += "WHERE usu_ApellidoNombre LIKE @pattern";
 
