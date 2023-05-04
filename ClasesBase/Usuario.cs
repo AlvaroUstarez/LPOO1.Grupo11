@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ClasesBase
 {
-    class Usuario
+    public class Usuario
     {
         private int usu_ID;
 
@@ -34,6 +34,14 @@ namespace ClasesBase
         {
             get { return usu_ApellidoNombre; }
             set { usu_ApellidoNombre = value; }
+        }
+
+        private Rol rol_Id;
+
+        internal Rol Rol_Id
+        {
+            get { return rol_Id; }
+            set { rol_Id = value; }
         }
     }
 
