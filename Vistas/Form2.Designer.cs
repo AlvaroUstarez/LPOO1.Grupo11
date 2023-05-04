@@ -97,7 +97,6 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Usuario";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBoxContra
             // 
@@ -105,7 +104,6 @@
             this.textBoxContra.Name = "textBoxContra";
             this.textBoxContra.Size = new System.Drawing.Size(160, 20);
             this.textBoxContra.TabIndex = 11;
-            this.textBoxContra.TextChanged += new System.EventHandler(this.textBoxContra_TextChanged);
             // 
             // label6
             // 
@@ -115,7 +113,6 @@
             this.label6.Size = new System.Drawing.Size(61, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "Contraseña";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBoxUsuario
             // 
@@ -123,7 +120,6 @@
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(160, 20);
             this.textBoxUsuario.TabIndex = 9;
-            this.textBoxUsuario.TextChanged += new System.EventHandler(this.textBoxUsuario_TextChanged);
             // 
             // textBoxEmail
             // 
@@ -131,7 +127,6 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(160, 20);
             this.textBoxEmail.TabIndex = 8;
-            this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             // 
             // label5
             // 
@@ -141,7 +136,6 @@
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "Usuario";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -151,7 +145,6 @@
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Email";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBoxNombre
             // 
@@ -159,7 +152,6 @@
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(160, 20);
             this.textBoxNombre.TabIndex = 5;
-            this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             // 
             // label3
             // 
@@ -169,7 +161,6 @@
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Nombre";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBoxApellido
             // 
@@ -177,7 +168,6 @@
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(160, 20);
             this.textBoxApellido.TabIndex = 3;
-            this.textBoxApellido.TextChanged += new System.EventHandler(this.textBoxApellido);
             // 
             // label2
             // 
@@ -187,7 +177,6 @@
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Apellido";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBoxRol
             // 
@@ -214,7 +203,6 @@
             this.label1.Size = new System.Drawing.Size(23, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rol";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnSaveUser
             // 
