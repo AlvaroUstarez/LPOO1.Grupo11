@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ClasesBase
 {
-    class ObraSocial
+    public class ObraSocial
     {
         private string os_Cuit;
 
