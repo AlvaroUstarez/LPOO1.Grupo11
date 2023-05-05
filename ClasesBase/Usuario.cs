@@ -58,6 +58,10 @@ namespace ClasesBase
             usu_Contraseña = password;
         }
 
+        public Usuario()
+        {
+        }
+
     }
 
 }

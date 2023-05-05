@@ -39,5 +39,32 @@ namespace Vistas
             fAltaObraSocial.Show();
             this.Close();
         }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro(a) que desea salir del sistema?",
+                 "Consulta",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Frm_User fUser = new Frm_User();
+            this.Hide();
+            fUser.Show();
+
+        }
+
+
     }
 }

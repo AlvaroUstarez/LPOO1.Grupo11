@@ -22,7 +22,6 @@ namespace Vistas
             FrmPrincipal fPrincipal = new FrmPrincipal();
             this.Hide();
             fPrincipal.Show();
-            this.Close();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

@@ -44,7 +44,7 @@ namespace Vistas
                 MessageBox.Show("Bienvenido");
                 this.Hide();
                 fPrincipal.Show();
-                this.Close();
+                //this.Close();
 
             }
             else

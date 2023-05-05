@@ -36,6 +36,10 @@ namespace Vistas
 
             TrabajarUsuario.insert_usuario(oUser);
 
+            FrmPrincipal fPrincipal = new FrmPrincipal();
+            this.Hide();
+            fPrincipal.Show();
+
 
         }
 

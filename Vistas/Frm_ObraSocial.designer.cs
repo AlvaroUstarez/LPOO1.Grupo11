@@ -146,7 +146,7 @@
             this.lblTituloAltaObraSocial.TabIndex = 10;
             this.lblTituloAltaObraSocial.Text = "Registrar Obra Social";
             // 
-            // FrmAltaObraSocial
+            // Frm_ObraSocial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -162,7 +162,7 @@
             this.Controls.Add(this.lblDireccion);
             this.Controls.Add(this.lblRazonSocial);
             this.Controls.Add(this.lblCuit);
-            this.Name = "FrmAltaObraSocial";
+            this.Name = "Frm_ObraSocial";
             this.Text = "Registrar Obra Social";
             this.ResumeLayout(false);
             this.PerformLayout();

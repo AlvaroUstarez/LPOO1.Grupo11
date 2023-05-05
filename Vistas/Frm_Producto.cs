@@ -21,10 +21,9 @@ namespace Vistas
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            //FrmPrincipal fPrincipal = new FrmPrincipal();
+            FrmPrincipal fPrincipal = new FrmPrincipal();
             this.Hide();
-            //fPrincipal.Show();
-            this.Close();
+            fPrincipal.Show();
         }
 
         private void btnAceptarAltaProd_Click(object sender, EventArgs e)
