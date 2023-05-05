@@ -51,6 +51,13 @@ namespace ClasesBase
             get { return rol_Codigo; }
             set { rol_Codigo = value; }
         }
+
+        public Usuario(String nombreUsuario, String password)
+        {
+            usu_NombreUsuario = nombreUsuario;
+            usu_Contraseña = password;
+        }
+
     }
 
 }
