@@ -77,18 +77,22 @@ namespace Vistas
         {
             dgwUsuarios.DataSource = TrabajarUsuario.list_usuarios();
         }
-
-        private void dgwUsuarios_CurrentCellChanged(object sender, EventArgs e)
+        
+        
+        //TODO:
+        private void dgwUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if ( dgwUsuarios.CurrentRow != null )
             {
-                cmbRol.SelectedValue = dgwUsuarios.CurrentRow.Cells["Rol_Codigo"].Value.ToString();
+                if (dgwUsuarios.CurrentRow != null)
+                {
+                    //cmbRol.SelectedValue = dgwUsuarios.CurrentRow.Cells["rol"].Value.ToString();
 
-                txtApellido.Text = dgwUsuarios.CurrentRow.Cells["Apellido"].Value.ToString();
-                txtNombre.Text = dgwUsuarios.CurrentRow.Cells["Nombre"].Value.ToString();
-                txtEmail.Text = dgwUsuarios.CurrentRow.Cells["Email"].Value.ToString();
-                txtUsuario.Text = dgwUsuarios.CurrentRow.Cells["Usuario"].Value.ToString();
-                txtContraseña.Text = dgwUsuarios.CurrentRow.Cells["Contraseña"].Value.ToString();
+                    //txtApellido.Text = dgwUsuarios.CurrentRow.Cells["Apellido"].Value.ToString();
+                    //txtNombre.Text = dgwUsuarios.CurrentRow.Cells["Nombre"].Value.ToString();
+                    txtEmail.Text = dgwUsuarios.CurrentRow.Cells["Email"].Value.ToString();
+                    txtUsuario.Text = dgwUsuarios.CurrentRow.Cells["Usuario"].Value.ToString();
+                    txtContraseña.Text = dgwUsuarios.CurrentRow.Cells["Contraseña"].Value.ToString();
+                }
             }
         }
 
