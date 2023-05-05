@@ -8,49 +8,56 @@ namespace ClasesBase
     public class Cliente
     {
         private string cli_DNI;
-        private string cli_Apellido;
-        private string cli_Nombre;
-        private string cli_Direccion;
-        private string oS_CUIT;
-        private string cli_NroCarnet;
-
+        
         public string Cli_DNI
         {
-            get { return Cli_DNI; }
-            set { Cli_DNI = value; }
+           get {return cli_DNI;}
+            set { cli_DNI = value; }
         }
+        private string cli_Apellido;
         
         public string Cli_Apellido
         {
-            get { return Cli_Apellido; }
-            set { Cli_Apellido = value; }
+            get { return cli_Apellido; }
+            set { cli_Apellido = value; }
         }
 
+        private string cli_Nombre;
+        
         public string Cli_Nombre
         {
-            get { return Cli_Nombre; }
-            set { Cli_Nombre = value; }
+            get { return cli_Nombre; }
+            set { cli_Nombre = value; }
         }
 
+        private string cli_Direccion;
+   
         public string Cli_Direccion
         {
-            get { return Cli_Direccion; }
-            set { Cli_Direccion = value; }
+            get { return cli_Direccion; }
+            set { cli_Direccion = value; }
         }
+
+        private string oS_CUIT;
 
         public string OS_CUIT
         {
-            get { return OS_CUIT; }
-            set { OS_CUIT = value; }
+            get { return oS_CUIT; }
+            set { oS_CUIT = value; }
         }
 
+        private string cli_NroCarnet;
         public string Cli_NroCarnet
         {
-            get { return Cli_NroCarnet; }
-            set { Cli_NroCarnet = value; }
+            get { return cli_NroCarnet; }
+            set { cli_NroCarnet = value; }
         }
 
 
+
+        public Cliente()
+        {
+        }
 
     }
 }
