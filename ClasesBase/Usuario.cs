@@ -36,12 +36,20 @@ namespace ClasesBase
             set { usu_ApellidoNombre = value; }
         }
 
-        private Rol rol_Id;
+        private string usu_Email;
 
-        internal Rol Rol_Id
+        public string Usu_Email
         {
-            get { return rol_Id; }
-            set { rol_Id = value; }
+            get { return usu_Email; }
+            set { usu_Email = value; }
+        }
+
+        private int rol_Codigo;
+
+        public int Rol_Codigo
+        {
+            get { return rol_Codigo; }
+            set { rol_Codigo = value; }
         }
     }
 
