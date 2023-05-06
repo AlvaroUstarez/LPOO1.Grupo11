@@ -44,10 +44,10 @@ namespace ClasesBase
             cmd.CommandText += " Cli_Apellido as 'apellido',";
             cmd.CommandText += " Cli_Nombre as 'nombre',";
             cmd.CommandText += " Cli_Direccion as 'direccion',";
-            cmd.CommandText += " OS_CUIT as 'cuit',";
+            cmd.CommandText += " Cli_NroCarnet as 'carnet',";
+            cmd.CommandText += " C.OS_CUIT as 'cuit',";
             cmd.CommandText += " Cli_NroCarnet as 'carnet'";
-            cmd.CommandText += " FROM Cliente as C";
-            cmd.CommandText += " LEFT JOIN ObraSocial as OS ON (OS.OS_CUIT = C.OS_CUIT)";
+            cmd.CommandText += " FROM Cliente as C LEFT JOIN ObraSocial as OS ON (OS.OS_CUIT = C.OS_CUIT)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
@@ -72,10 +72,11 @@ namespace ClasesBase
             cmd.CommandText += " Cli_Apellido as 'apellido',";
             cmd.CommandText += " Cli_Nombre as 'nombre',";
             cmd.CommandText += " Cli_Direccion as 'direccion',";
-            cmd.CommandText += " OS_CUIT as 'cuit',";
+            cmd.CommandText += " Cli_NroCarnet as 'carnet',";
+            cmd.CommandText += " C.OS_CUIT as 'cuit',";
             cmd.CommandText += " Cli_NroCarnet as 'carnet'";
-            cmd.CommandText += " FROM Cliente as C";
-            cmd.CommandText += " LEFT JOIN ObraSocial as OS ON (OS.OS_CUIT = C.OS_CUIT)";
+            cmd.CommandText += " FROM Cliente as C LEFT JOIN ObraSocial as OS ON (OS.OS_CUIT = C.OS_CUIT)";
+            cmd.CommandText += "WHERE Cli_DNI LIKE @pattern";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 

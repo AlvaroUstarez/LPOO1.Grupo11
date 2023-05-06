@@ -51,6 +51,8 @@
     </Compile>
     <Compile Include="Rol.cs" />
     <Compile Include="TrabajarCliente.cs" />
+    <Compile Include="TrabajarObraSocial.cs" />
+    <Compile Include="TrabajarProducto.cs" />
     <Compile Include="TrabajarUsuario.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>

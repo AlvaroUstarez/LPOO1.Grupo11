@@ -58,9 +58,9 @@
             // dgwCliente
             // 
             this.dgwCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwCliente.Location = new System.Drawing.Point(152, 128);
+            this.dgwCliente.Location = new System.Drawing.Point(46, 124);
             this.dgwCliente.Name = "dgwCliente";
-            this.dgwCliente.Size = new System.Drawing.Size(473, 267);
+            this.dgwCliente.Size = new System.Drawing.Size(713, 267);
             this.dgwCliente.TabIndex = 7;
             // 
             // btnClienteBuscar
