@@ -37,8 +37,9 @@
             this.ingresarNuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obraSocialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarObraSocialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.listaDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,7 +88,8 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresarNuevoClienteToolStripMenuItem});
+            this.ingresarNuevoClienteToolStripMenuItem,
+            this.listaDeClientesToolStripMenuItem});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.clienteToolStripMenuItem.Text = "Cliente";
@@ -114,6 +116,13 @@
             this.registrarObraSocialToolStripMenuItem.Text = "Registrar Obra Social";
             this.registrarObraSocialToolStripMenuItem.Click += new System.EventHandler(this.registrarObraSocialToolStripMenuItem_Click);
             // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
+            // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(562, 226);
@@ -124,12 +133,12 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // usuarioToolStripMenuItem
+            // listaDeClientesToolStripMenuItem
             // 
-            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.usuarioToolStripMenuItem.Text = "Usuario";
-            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
+            this.listaDeClientesToolStripMenuItem.Name = "listaDeClientesToolStripMenuItem";
+            this.listaDeClientesToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.listaDeClientesToolStripMenuItem.Text = "Lista de Clientes";
+            this.listaDeClientesToolStripMenuItem.Click += new System.EventHandler(this.listaDeClientesToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -162,5 +171,6 @@
         private System.Windows.Forms.ToolStripMenuItem registrarObraSocialToolStripMenuItem;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaDeClientesToolStripMenuItem;
     }
 }

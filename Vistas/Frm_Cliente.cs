@@ -42,6 +42,13 @@ namespace Vistas
                            + "Obra Social: " + oCliente.OS_CUIT + "\n"
                            + "Nro de Carnet: " + oCliente.Cli_NroCarnet + "\n"
                            , "Cliente Ingresado");
+
+            TrabajarCliente.insert_cliente(oCliente);
+
+            FrmPrincipal fPrincipal = new FrmPrincipal();
+            this.Hide();
+            fPrincipal.Show();
+        
         }
     }
 }

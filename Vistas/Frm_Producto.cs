@@ -42,6 +42,12 @@ namespace Vistas
                             + "Precio: " + oProd.Prod_Precio + "\n"
                             + "Codigo: " + oProd.Prod_Codigo + "\n"
                             , "Producto Agregado");
+
+            TrabajarProducto.insert_product(oProd);
+
+            FrmPrincipal fPrincipal = new FrmPrincipal();
+            this.Hide();
+            fPrincipal.Show();
         }
 
         private void Frm_Producto_Load(object sender, EventArgs e)

@@ -82,6 +82,18 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Frm_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaCliente.Designer.cs">
+      <DependentUpon>ListaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaProducto.Designer.cs">
+      <DependentUpon>ListaProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Cliente.resx">
@@ -102,6 +114,12 @@
     <EmbeddedResource Include="Frm_User.resx">
       <DependentUpon>Frm_User.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaCliente.resx">
+      <DependentUpon>ListaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaProducto.resx">
+      <DependentUpon>ListaProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -110,7 +128,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram4.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,6 +146,9 @@
       <Project>{D2CAC91B-E4EA-431E-A9A0-9705190D1D0A}</Project>
       <Name>ClasesBase</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -40,6 +40,13 @@ namespace Vistas
                            + "Dirección: " + oObraSocial.Os_Direccion + "\n"
                            + "Teléfono: " + oObraSocial.Os_Telefono + "\n"
                            , "Obra Social Registrada");
+
+            TrabajarObraSocial.insert_obrasocial(oObraSocial);
+
+            FrmPrincipal fPrincipal = new FrmPrincipal();
+            this.Hide();
+            fPrincipal.Show();
+
         }
 
     }

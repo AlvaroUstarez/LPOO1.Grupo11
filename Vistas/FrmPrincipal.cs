@@ -65,6 +65,13 @@ namespace Vistas
 
         }
 
+        private void listaDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaCliente lCliente = new ListaCliente();
+            this.Hide();
+            lCliente.Show();
+        }
+
 
     }
 }
