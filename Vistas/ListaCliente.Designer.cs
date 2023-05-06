@@ -240,6 +240,7 @@
             // 
             // txtIdCliente
             // 
+            this.txtIdCliente.Enabled = false;
             this.txtIdCliente.HideSelection = false;
             this.txtIdCliente.Location = new System.Drawing.Point(98, 239);
             this.txtIdCliente.Name = "txtIdCliente";
