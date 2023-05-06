@@ -45,6 +45,7 @@
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSaveUser = new System.Windows.Forms.Button();
+            this.btnVolverFRMUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsuarios)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -212,11 +213,22 @@
             this.btnSaveUser.UseVisualStyleBackColor = true;
             this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
             // 
+            // btnVolverFRMUser
+            // 
+            this.btnVolverFRMUser.Location = new System.Drawing.Point(593, 370);
+            this.btnVolverFRMUser.Name = "btnVolverFRMUser";
+            this.btnVolverFRMUser.Size = new System.Drawing.Size(77, 24);
+            this.btnVolverFRMUser.TabIndex = 6;
+            this.btnVolverFRMUser.Text = "Volver";
+            this.btnVolverFRMUser.UseVisualStyleBackColor = true;
+            this.btnVolverFRMUser.Click += new System.EventHandler(this.btnVolverFRMUser_Click);
+            // 
             // Frm_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(908, 467);
+            this.Controls.Add(this.btnVolverFRMUser);
             this.Controls.Add(this.btnSaveUser);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgwUsuarios);
@@ -252,5 +264,6 @@
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button btnSaveUser;
+        private System.Windows.Forms.Button btnVolverFRMUser;
     }
 }

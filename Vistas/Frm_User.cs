@@ -100,6 +100,13 @@ namespace Vistas
             }
         }
 
+        private void btnVolverFRMUser_Click(object sender, EventArgs e)
+        {
+            FrmPrincipal fPrincipal = new FrmPrincipal();
+            this.Hide();
+            fPrincipal.Show();
+        }
+
 
 
 

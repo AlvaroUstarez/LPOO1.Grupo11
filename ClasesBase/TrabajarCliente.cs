@@ -40,6 +40,7 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "Select";
+            cmd.CommandText += " Cli_Id as 'id',";
             cmd.CommandText += " Cli_DNI as 'dni',";
             cmd.CommandText += " Cli_Apellido as 'apellido',";
             cmd.CommandText += " Cli_Nombre as 'nombre',";
@@ -68,6 +69,7 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "Select";
+            cmd.CommandText += " Cli_Id as 'id',";
             cmd.CommandText += " Cli_DNI as 'dni',";
             cmd.CommandText += " Cli_Apellido as 'apellido',";
             cmd.CommandText += " Cli_Nombre as 'nombre',";
@@ -90,6 +92,29 @@ namespace ClasesBase
             da.Fill(dt);
 
             return dt;
+        }
+
+        public static void modificar_Cliente(int id, Cliente cliente)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "UPDATE Cliente SET Cli_DNI = @dni, Cli_Apellido = @apellido, Cli_Nombre = @nombre, Cli_Direccion = @direccion, OS_CUIT = @cuit, Cli_NroCarnet = @carnet";
+            cmd.CommandText += " WHERE Cli_Id = @id";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@dni", cliente.Cli_DNI);
+            cmd.Parameters.AddWithValue("@apellido", cliente.Cli_Apellido);
+            cmd.Parameters.AddWithValue("@nombre", cliente.Cli_Nombre);
+            cmd.Parameters.AddWithValue("@direccion", cliente.Cli_Direccion);
+            cmd.Parameters.AddWithValue("@cuit", cliente.OS_CUIT);
+            cmd.Parameters.AddWithValue("@carnet", cliente.Cli_NroCarnet);
+
+            // Ejecuta la consulta
+            cnn.Open();
+            int filasAfectadas = cmd.ExecuteNonQuery();
+            cnn.Close();
         }
 
 
