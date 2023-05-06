@@ -83,7 +83,7 @@
             // 
             // btnClienteBuscar
             // 
-            this.btnClienteBuscar.Location = new System.Drawing.Point(679, 81);
+            this.btnClienteBuscar.Location = new System.Drawing.Point(684, 81);
             this.btnClienteBuscar.Name = "btnClienteBuscar";
             this.btnClienteBuscar.Size = new System.Drawing.Size(97, 23);
             this.btnClienteBuscar.TabIndex = 6;
