@@ -62,6 +62,31 @@ namespace ClasesBase
             return dt;
         }
 
+        public static DataTable list_clientes_ventas()
+        {
+
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "Select";
+            cmd.CommandText += " Cli_Id as 'id',";
+            cmd.CommandText += " Cli_DNI as 'dni',";
+            cmd.CommandText += " Cli_Apellido as 'apellido',";
+            cmd.CommandText += " Cli_DNI + ', ' + Cli_Apellido as 'dni_apellido'";
+            cmd.CommandText += " FROM Cliente as C LEFT JOIN ObraSocial as OS ON (OS.OS_CUIT = C.OS_CUIT)";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            //Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
 
         public static DataTable search_clientes(string sPattern)
         {

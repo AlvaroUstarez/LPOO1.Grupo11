@@ -28,19 +28,18 @@ namespace Vistas
 
         private void btnAceptarAltaProd_Click(object sender, EventArgs e)
         {
-            int codigo = 0;
-            codigo += 1;
+   
             Producto oProd = new Producto();
-            oProd.Prod_Codigo = codigo.ToString();
-            oProd.Prod_Categoria = txtCategoriaProd.Text;
+            oProd.Prod_Categoria= txtCategoriaProd.Text;
+            
             oProd.Prod_Descripcion = txtDescripcionProd.Text;
+
             oProd.Prod_Precio = Convert.ToDouble(txtPrecioProd.Text);
 
 
             MessageBox.Show("Categoría: " + oProd.Prod_Categoria + "\n"
                             + "Descripción: " + oProd.Prod_Descripcion + "\n"
                             + "Precio: " + oProd.Prod_Precio + "\n"
-                            + "Codigo: " + oProd.Prod_Codigo + "\n"
                             , "Producto Agregado");
 
             TrabajarProducto.insert_product(oProd);
@@ -48,6 +47,8 @@ namespace Vistas
             FrmPrincipal fPrincipal = new FrmPrincipal();
             this.Hide();
             fPrincipal.Show();
+
+  
         }
 
         private void Frm_Producto_Load(object sender, EventArgs e)

@@ -72,6 +72,21 @@ namespace Vistas
             lCliente.Show();
         }
 
+        private void listarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaProducto lProducto = new ListaProducto();
+            this.Hide();
+            lProducto.Show();
+        }
+
+
+        private void agregarVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVentas formVenta = new FrmVentas();
+            this.Hide();
+            formVenta.Show();
+        }
+
 
     }
 }

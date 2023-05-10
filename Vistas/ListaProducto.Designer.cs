@@ -28,37 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtBuscarProd = new System.Windows.Forms.TextBox();
+            this.btnBuscarP = new System.Windows.Forms.Button();
+            this.dgwProd = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnSalirP = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwProd)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtBuscarProd
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(420, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtBuscarProd.Location = new System.Drawing.Point(92, 44);
+            this.txtBuscarProd.Name = "txtBuscarProd";
+            this.txtBuscarProd.Size = new System.Drawing.Size(420, 20);
+            this.txtBuscarProd.TabIndex = 0;
             // 
-            // button1
+            // btnBuscarP
             // 
-            this.button1.Location = new System.Drawing.Point(526, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "BUSCAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBuscarP.Location = new System.Drawing.Point(526, 42);
+            this.btnBuscarP.Name = "btnBuscarP";
+            this.btnBuscarP.Size = new System.Drawing.Size(97, 23);
+            this.btnBuscarP.TabIndex = 1;
+            this.btnBuscarP.Text = "BUSCAR";
+            this.btnBuscarP.UseVisualStyleBackColor = true;
+            this.btnBuscarP.Click += new System.EventHandler(this.btnBuscarP_Click);
             // 
-            // dataGridView1
+            // dgwProd
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(69, 88);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(473, 267);
-            this.dataGridView1.TabIndex = 2;
+            this.dgwProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwProd.Location = new System.Drawing.Point(69, 88);
+            this.dgwProd.Name = "dgwProd";
+            this.dgwProd.Size = new System.Drawing.Size(554, 267);
+            this.dgwProd.TabIndex = 2;
             // 
             // label1
             // 
@@ -69,28 +70,29 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "INGRESE CODIGO DEL PRODUCTO";
             // 
-            // button2
+            // btnSalirP
             // 
-            this.button2.Location = new System.Drawing.Point(257, 387);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 40);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "SALIR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSalirP.Location = new System.Drawing.Point(257, 387);
+            this.btnSalirP.Name = "btnSalirP";
+            this.btnSalirP.Size = new System.Drawing.Size(99, 40);
+            this.btnSalirP.TabIndex = 4;
+            this.btnSalirP.Text = "SALIR";
+            this.btnSalirP.UseVisualStyleBackColor = true;
+            this.btnSalirP.Click += new System.EventHandler(this.btnSalirP_Click);
             // 
             // ListaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(678, 480);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSalirP);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgwProd);
+            this.Controls.Add(this.btnBuscarP);
+            this.Controls.Add(this.txtBuscarProd);
             this.Name = "ListaProducto";
             this.Text = "ListaProducto";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwProd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,10 +100,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtBuscarProd;
+        private System.Windows.Forms.Button btnBuscarP;
+        private System.Windows.Forms.DataGridView dgwProd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSalirP;
     }
 }
