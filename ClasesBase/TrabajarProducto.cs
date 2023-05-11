@@ -15,14 +15,13 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Producto(Prod_Categoria, Prod_Descripcion, Prod_Precio) values(@procategoria, @prodescripcion, @proprecio)";
+            cmd.CommandText = "INSERT INTO Producto(Prod_Categoria, Prod_Descripcion, Prod_Precio) values(@prodcategoria, @prodescripcion, @prodprecio)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
-            //cmd.Parameters.AddWithValue("@procodigo", product.Prod_Codigo);
-            cmd.Parameters.AddWithValue("@procategoria", product.Prod_Categoria);
+            cmd.Parameters.AddWithValue("@prodcategoria", product.Prod_Categoria);
             cmd.Parameters.AddWithValue("@prodescripcion", product.Prod_Descripcion);
-            cmd.Parameters.AddWithValue("@proprecio", product.Prod_Precio);
+            cmd.Parameters.AddWithValue("@prodprecio", product.Prod_Precio);
 
             cnn.Open();
             cmd.ExecuteNonQuery();
@@ -36,10 +35,10 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "Select";
-            cmd.CommandText += " Prod_Codigo as 'cod',";
-            cmd.CommandText += " Prod_Categoria as 'cat',";
-            cmd.CommandText += " Prod_Descripcion as 'desc',";
-            cmd.CommandText += " Prod_Precio as 'precio'";
+            cmd.CommandText += " Prod_Codigo as 'Codigo',";
+            cmd.CommandText += " Prod_Categoria as 'Categoria',";
+            cmd.CommandText += " Prod_Descripcion as 'Descripcion',";
+            cmd.CommandText += " Prod_Precio as 'Precio'";
 
             cmd.CommandText += " FROM Producto as P";
             cmd.CommandType = CommandType.Text;
@@ -55,21 +54,21 @@ namespace ClasesBase
             return dt;
         }
 
-        public static DataTable search_producto(int sPattern)
+        public static DataTable search_producto(int codigo)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT Prod_Codigo AS 'cod', ";
-            cmd.CommandText += "Prod_Categoria AS 'cat', ";
-            cmd.CommandText += "Prod_Descripcion AS 'desc', ";
-            cmd.CommandText += "Prod_Precio AS 'precio' ";
+            cmd.CommandText = "SELECT Prod_Codigo AS 'Codigo', ";
+            cmd.CommandText += "Prod_Categoria AS 'Categoria', ";
+            cmd.CommandText += "Prod_Descripcion AS 'Descricion', ";
+            cmd.CommandText += "Prod_Precio AS 'Precio' ";
             cmd.CommandText += "FROM Producto AS P ";
-            cmd.CommandText += "WHERE Prod_Codigo = @pattern";
+            cmd.CommandText += "WHERE Prod_Codigo = @codigo";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
-            cmd.Parameters.AddWithValue("@pattern", sPattern);
+            cmd.Parameters.AddWithValue("@codigo", codigo);
 
             //Ejecuta la consulta
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -81,35 +80,36 @@ namespace ClasesBase
             return dt;
         }
 
-        public static Producto search_producto_venta(int sPattern)
-        {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+        //public static Producto search_producto_venta(int id)
+        //{
+        //    SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT Prod_Codigo, Prod_Categoria, Prod_Descripcion, Prod_Precio FROM Producto WHERE Prod_Codigo = @pattern";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
+        //    SqlCommand cmd = new SqlCommand();
+        //    cmd.CommandText = "SELECT Prod_Id, Prod_Codigo, Prod_Categoria, Prod_Descripcion, Prod_Precio FROM Producto WHERE Prod_Id = @id";
+        //    cmd.CommandType = CommandType.Text;
+        //    cmd.Connection = cnn;
 
-            cmd.Parameters.AddWithValue("@pattern", sPattern);
+        //    cmd.Parameters.AddWithValue("@id", id);
 
-            cnn.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
+        //    cnn.Open();
+        //    SqlDataReader reader = cmd.ExecuteReader();
 
-            Producto producto = null;
+        //    Producto producto = null;
 
-            if (reader.Read())
-            {
-                producto = new Producto();
-                //producto.Prod_Codigo = (string)reader["Prod_Codigo"];
-                producto.Prod_Categoria = (string)reader["Prod_Categoria"];
-                producto.Prod_Descripcion = (string)reader["Prod_Descripcion"];
-                producto.Prod_Precio = (float)reader["Prod_Precio"];
-            }
+        //    if (reader.Read())
+        //    {
+        //        producto = new Producto();
+        //        producto.Prod_Codigo = (int)reader["Prod_Id"];
+        //        producto.Prod_Codigo = (string)reader["Prod_Codigo"];
+        //        producto.Prod_Categoria = (string)reader["Prod_Categoria"];
+        //        producto.Prod_Descripcion = (string)reader["Prod_Descripcion"];
+        //        producto.Prod_Precio = (float)reader["Prod_Precio"];
+        //    }
 
-            reader.Close();
-            cnn.Close();
+        //    reader.Close();
+        //    cnn.Close();
 
-            return producto;
-        }
+        //    return producto;
+        //}
     }
 }

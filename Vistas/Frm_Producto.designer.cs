@@ -43,7 +43,7 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(27, 133);
+            this.lblCategoria.Location = new System.Drawing.Point(27, 111);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(78, 20);
             this.lblCategoria.TabIndex = 0;
@@ -62,7 +62,7 @@
             // txtCategoriaProd
             // 
             this.txtCategoriaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoriaProd.Location = new System.Drawing.Point(122, 133);
+            this.txtCategoriaProd.Location = new System.Drawing.Point(122, 111);
             this.txtCategoriaProd.Name = "txtCategoriaProd";
             this.txtCategoriaProd.Size = new System.Drawing.Size(124, 26);
             this.txtCategoriaProd.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(281, 133);
+            this.lblPrecio.Location = new System.Drawing.Point(281, 111);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(53, 20);
             this.lblPrecio.TabIndex = 4;
@@ -88,7 +88,7 @@
             // txtPrecioProd
             // 
             this.txtPrecioProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioProd.Location = new System.Drawing.Point(379, 133);
+            this.txtPrecioProd.Location = new System.Drawing.Point(379, 111);
             this.txtPrecioProd.Name = "txtPrecioProd";
             this.txtPrecioProd.Size = new System.Drawing.Size(100, 26);
             this.txtPrecioProd.TabIndex = 5;

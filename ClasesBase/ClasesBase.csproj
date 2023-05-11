@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+    <Compile Include="VentaDetalle.cs" />
     <Compile Include="ObraSocial.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,7 +55,9 @@
     <Compile Include="TrabajarObraSocial.cs" />
     <Compile Include="TrabajarProducto.cs" />
     <Compile Include="TrabajarUsuario.cs" />
+    <Compile Include="TrabajarVenta.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="Venta.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
