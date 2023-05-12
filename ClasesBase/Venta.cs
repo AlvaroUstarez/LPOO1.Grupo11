@@ -6,7 +6,7 @@ using ClasesBase;
 
 namespace ClasesBase
 {
-    class Venta
+    public class Venta
     {
         private int ventaNumero;
         public int VentaNumero

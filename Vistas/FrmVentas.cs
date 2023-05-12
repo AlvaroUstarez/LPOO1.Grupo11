@@ -21,7 +21,7 @@ namespace Vistas
             load_product();
 
             //TODO
-            TrabajarVenta.iniciar_venta(); 
+            load_venta();
         }
 
         private void FrmVentas_Load(object sender, EventArgs e)
@@ -102,15 +102,44 @@ namespace Vistas
 
         }
 
+        //Agrega una venta con la fecha y asigna Ven_Nro al textbox
+        private void load_venta()
+        {
+            Venta venta = new Venta();
+            venta.VentaFecha = dtpFechaVenta.Value;
+            int nroVenta = TrabajarVenta.iniciar_venta(venta);
+            txtNroVenta.Text = Convert.ToString(nroVenta);
+        }
+
+        //Agregar Lista de detalles de venta
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            BindingList<VentaDetalle> ventaDetalles = TrabajarVenta.obtenerDetalles();
-            VentaDetalle detalle = new VentaDetalle();
+            if (int.Parse(cbmVC.ValueMember) == 0)
+            {
+                MessageBox.Show("No se puede Agregar la venta sin un cliente");
+            }
+            else
+            {
+                BindingList<VentaDetalle> detalles = TrabajarVenta.obtenerDetalles();
 
+                foreach (VentaDetalle detalle in detalles)
+                {
+                    detalle.VentaNumero = int.Parse(txtNroVenta.Text);
+                    TrabajarVenta.guardarDetalle(detalle);
+                }
 
-
+                FrmPrincipal fPrincipal = new FrmPrincipal();
+                this.Hide();
+                fPrincipal.Show();
+            }
+            
+            
             
         }
+
+
+        
+
 
 
 

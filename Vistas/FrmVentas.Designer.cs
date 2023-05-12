@@ -52,7 +52,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgwDetalleVenta = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNroVenta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwListProd)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwDetalleVenta)).BeginInit();
@@ -273,20 +273,20 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Venta Nro:";
             // 
-            // textBox2
+            // txtNroVenta
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(118, 20);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(86, 20);
-            this.textBox2.TabIndex = 11;
+            this.txtNroVenta.Enabled = false;
+            this.txtNroVenta.Location = new System.Drawing.Point(118, 20);
+            this.txtNroVenta.Name = "txtNroVenta";
+            this.txtNroVenta.Size = new System.Drawing.Size(86, 20);
+            this.txtNroVenta.TabIndex = 11;
             // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 459);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNroVenta);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dgwDetalleVenta);
             this.Controls.Add(this.textBox1);
@@ -338,6 +338,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dgwDetalleVenta;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNroVenta;
     }
 }
