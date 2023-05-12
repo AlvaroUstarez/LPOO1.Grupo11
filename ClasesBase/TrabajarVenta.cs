@@ -27,16 +27,33 @@ namespace ClasesBase
         /**Se agrega la vanta a la bd para obtener el numero de venta,
          * Luege se agregan los detalles con el numero de venta
          */
-        public static int iniciar_venta(Venta venta)
+        public static int iniciar_venta()
         {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT TOP 1 Ven_Nro FROM Venta ORDER BY Ven_Nro desc";            
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cnn.Open();
+            int numeroVenta = (int)cmd.ExecuteScalar();
+            cnn.Close();
+
+            // Utiliza el número de venta como necesites
+            return numeroVenta+1;
+        }
+
+        public static int guardarVenta(Venta venta) {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Venta(Ven_Fecha) OUTPUT INSERTED.Ven_Nro VALUES(@fecha)";
+            cmd.CommandText = "INSERT INTO Venta(Ven_Fecha, Cli_Id) OUTPUT INSERTED.Ven_Nro VALUES(@fecha, @ClienteId)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@fecha", venta.VentaFecha);
+            cmd.Parameters.AddWithValue("@ClienteId", venta.ClienteId);
+
 
             cnn.Open();
             int numeroVenta = (int)cmd.ExecuteScalar();
@@ -67,8 +84,23 @@ namespace ClasesBase
         }
 
 
-        public static void agrear_venta_detalle()
+        public static void agrear_venta_detalle(Venta venta)
         {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "UPDATE Venta SET Cli_Id = @id";
+            cmd.CommandText += " WHERE Cli_Id = @id";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@id", venta.ClienteId);
+  
+
+            // Ejecuta la consulta
+            cnn.Open();
+            int filasAfectadas = cmd.ExecuteNonQuery();
+            cnn.Close();
+
             
         }
 

@@ -22,12 +22,12 @@ namespace ClasesBase
             set { ventaFecha = value; }
         }
 
-        private string clienteDNI;
+        private int clienteId;
+        public int ClienteId
 
-        public string ClienteDNI
         {
-            get { return clienteDNI; }
-            set { clienteDNI = value; }
+            get { return clienteId; }
+            set { clienteId = value; }
         }
 
         private List<VentaDetalle> ventaDetalle;
