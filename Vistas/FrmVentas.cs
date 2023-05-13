@@ -29,11 +29,6 @@ namespace Vistas
             load_usuers();
         }
 
-        private void agregar_venta()
-        {
-            
-        }
-
         private void load_product()
         {
             dgwListProd.DataSource = TrabajarProducto.listar_product();
@@ -72,6 +67,7 @@ namespace Vistas
             }
         }
 
+        //Agregar productos al data grid view
         private void btnAgregarProd_Click(object sender, EventArgs e)
         {
             VentaDetalle detalle = new VentaDetalle();
@@ -102,44 +98,17 @@ namespace Vistas
 
         }
 
-        //Agrega una venta con la fecha y asigna Ven_Nro al textbox
+        //Devuelve el número de venta y lo asigna al txtNroVenta
         private void load_venta()
         {
             int nroVenta = TrabajarVenta.iniciar_venta();
             txtNroVenta.Text = Convert.ToString(nroVenta);
         }
 
-        //Agregar Lista de detalles de venta
+        //Agregar Venta
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            //DataTable dt = TrabajarCliente.list_clientes_ventas();
 
-            //DataRow dr = dt.NewRow();
-
-            //dr["dni_apellido"] = "Seleccionar un cliente";
-            //dr["id"] = 0;
-            //dt.Rows.InsertAt(dr, 0);
-            //cbmVC.DataSource = dt;
-            //cbmVC.ValueMember = "id";
-            //cbmVC.DisplayMember = "dni_apellido";
-            //cbmVC.SelectedIndex = 0;
-
-            //DataRow fila = dt.Rows[0];
-            //MessageBox.Show();
-
-
-
-
-            //if (int.Parse(cbmVC.ValueMember) == 0)
-            //{
-            //    MessageBox.Show("No se puede Agregar la venta sin un cliente");
-            //}
-            //else
-            //{
-            //int.Parse(dt);
-
-                
-            //int numeroVenta = guardarVenta(Venta venta);
                 int idcliente = int.Parse(cbmVC.SelectedValue.ToString());
                 Venta venta = new Venta();
                 venta.VentaFecha = dtpFechaVenta.Value;
@@ -147,28 +116,18 @@ namespace Vistas
                 TrabajarVenta.guardarVenta(venta);
                 BindingList<VentaDetalle> detalles = TrabajarVenta.obtenerDetalles();
 
-                MessageBox.Show(Convert.ToString( cbmVC.SelectedIndex));
-
-                
-
-
                 foreach (VentaDetalle detalle in detalles)
                 {
                     detalle.VentaNumero = int.Parse(txtNroVenta.Text);
                     TrabajarVenta.guardarDetalle(detalle);
                 }
 
-
                 TrabajarVenta.agrear_venta_detalle(venta);
-
 
                 FrmPrincipal fPrincipal = new FrmPrincipal();
                 this.Hide();
                 fPrincipal.Show();
-            //}
-            
-            
-            
+
         }
 
 

@@ -80,36 +80,32 @@ namespace ClasesBase
             return dt;
         }
 
-        //public static Producto search_producto_venta(int id)
-        //{
-        //    SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+        public static DataTable buscarProductoDescripcion(string descripcion)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
 
-        //    SqlCommand cmd = new SqlCommand();
-        //    cmd.CommandText = "SELECT Prod_Id, Prod_Codigo, Prod_Categoria, Prod_Descripcion, Prod_Precio FROM Producto WHERE Prod_Id = @id";
-        //    cmd.CommandType = CommandType.Text;
-        //    cmd.Connection = cnn;
+            cmd.CommandText = "Select";
+            cmd.CommandText += " Prod_Codigo as 'Codigo',";
+            cmd.CommandText += " Prod_Categoria as 'Categoria',";
+            cmd.CommandText += " Prod_Descripcion as 'Descripcion',";
+            cmd.CommandText += " Prod_Precio as 'Precio'";
+            cmd.CommandText += " FROM Producto";
+            cmd.CommandText += " WHERE Prod_Descripcion LIKE @descripcion";
+            
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
 
-        //    cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@descripcion", "%" + descripcion + "%");
 
-        //    cnn.Open();
-        //    SqlDataReader reader = cmd.ExecuteReader();
+            //Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
 
-        //    Producto producto = null;
+            //Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
 
-        //    if (reader.Read())
-        //    {
-        //        producto = new Producto();
-        //        producto.Prod_Codigo = (int)reader["Prod_Id"];
-        //        producto.Prod_Codigo = (string)reader["Prod_Codigo"];
-        //        producto.Prod_Categoria = (string)reader["Prod_Categoria"];
-        //        producto.Prod_Descripcion = (string)reader["Prod_Descripcion"];
-        //        producto.Prod_Precio = (float)reader["Prod_Precio"];
-        //    }
-
-        //    reader.Close();
-        //    cnn.Close();
-
-        //    return producto;
-        //}
+            return dt;
+        }
     }
 }

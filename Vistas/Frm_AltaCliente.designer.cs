@@ -1,6 +1,6 @@
 ﻿namespace Vistas
 {
-    partial class Frm_Cliente
+    partial class Frm_AltaCliente
     {
         /// <summary>
         /// Required designer variable.

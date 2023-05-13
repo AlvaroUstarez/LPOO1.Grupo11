@@ -46,17 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmModificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModificarProducto.Designer.cs">
+      <DependentUpon>FrmModificarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmVentas.Designer.cs">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Cliente.cs">
+    <Compile Include="Frm_AltaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Cliente.designer.cs">
-      <DependentUpon>Frm_Cliente.cs</DependentUpon>
+    <Compile Include="Frm_AltaCliente.designer.cs">
+      <DependentUpon>Frm_AltaCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -100,13 +106,22 @@
     <Compile Include="ListaProducto.Designer.cs">
       <DependentUpon>ListaProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaVenta.Designer.cs">
+      <DependentUpon>FrmListaVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmModificarProducto.resx">
+      <DependentUpon>FrmModificarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Cliente.resx">
-      <DependentUpon>Frm_Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_AltaCliente.resx">
+      <DependentUpon>Frm_AltaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -128,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListaProducto.resx">
       <DependentUpon>ListaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaVenta.resx">
+      <DependentUpon>FrmListaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

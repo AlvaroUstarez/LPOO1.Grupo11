@@ -34,6 +34,8 @@
             this.btnClienteBuscar = new System.Windows.Forms.Button();
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtCarnet = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCuitOS = new System.Windows.Forms.TextBox();
@@ -47,8 +49,7 @@
             this.txtDniCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnModificarCliente = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtIdCliente = new System.Windows.Forms.TextBox();
+            this.btnOrdenarApellido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(357, 56);
+            this.label1.Location = new System.Drawing.Point(206, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 13);
             this.label1.TabIndex = 8;
@@ -83,7 +84,7 @@
             // 
             // btnClienteBuscar
             // 
-            this.btnClienteBuscar.Location = new System.Drawing.Point(684, 81);
+            this.btnClienteBuscar.Location = new System.Drawing.Point(509, 81);
             this.btnClienteBuscar.Name = "btnClienteBuscar";
             this.btnClienteBuscar.Size = new System.Drawing.Size(97, 23);
             this.btnClienteBuscar.TabIndex = 6;
@@ -93,9 +94,9 @@
             // 
             // txtBuscarCliente
             // 
-            this.txtBuscarCliente.Location = new System.Drawing.Point(231, 84);
+            this.txtBuscarCliente.Location = new System.Drawing.Point(71, 84);
             this.txtBuscarCliente.Name = "txtBuscarCliente";
-            this.txtBuscarCliente.Size = new System.Drawing.Size(420, 20);
+            this.txtBuscarCliente.Size = new System.Drawing.Size(414, 20);
             this.txtBuscarCliente.TabIndex = 5;
             // 
             // groupBox1
@@ -121,6 +122,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Cliente";
             // 
+            // txtIdCliente
+            // 
+            this.txtIdCliente.Enabled = false;
+            this.txtIdCliente.HideSelection = false;
+            this.txtIdCliente.Location = new System.Drawing.Point(98, 239);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.Size = new System.Drawing.Size(164, 20);
+            this.txtIdCliente.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(26, 242);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(18, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "ID";
+            // 
             // txtCarnet
             // 
             this.txtCarnet.Location = new System.Drawing.Point(98, 205);
@@ -136,7 +155,6 @@
             this.label7.Size = new System.Drawing.Size(53, 13);
             this.label7.TabIndex = 10;
             this.label7.Text = "N° Carnet";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtCuitOS
             // 
@@ -228,30 +246,22 @@
             this.btnModificarCliente.UseVisualStyleBackColor = true;
             this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
-            // label8
+            // btnOrdenarApellido
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 242);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(18, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "ID";
-            this.label8.Click += new System.EventHandler(this.label8_Click_1);
-            // 
-            // txtIdCliente
-            // 
-            this.txtIdCliente.Enabled = false;
-            this.txtIdCliente.HideSelection = false;
-            this.txtIdCliente.Location = new System.Drawing.Point(98, 239);
-            this.txtIdCliente.Name = "txtIdCliente";
-            this.txtIdCliente.Size = new System.Drawing.Size(164, 20);
-            this.txtIdCliente.TabIndex = 13;
+            this.btnOrdenarApellido.Location = new System.Drawing.Point(612, 81);
+            this.btnOrdenarApellido.Name = "btnOrdenarApellido";
+            this.btnOrdenarApellido.Size = new System.Drawing.Size(119, 23);
+            this.btnOrdenarApellido.TabIndex = 12;
+            this.btnOrdenarApellido.Text = "Ordenar por Apellido";
+            this.btnOrdenarApellido.UseVisualStyleBackColor = true;
+            this.btnOrdenarApellido.Click += new System.EventHandler(this.btnOrdenarApellido_Click);
             // 
             // ListaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 524);
+            this.Controls.Add(this.btnOrdenarApellido);
             this.Controls.Add(this.btnModificarCliente);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClienteSalir);
@@ -292,5 +302,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtIdCliente;
+        private System.Windows.Forms.Button btnOrdenarApellido;
     }
 }

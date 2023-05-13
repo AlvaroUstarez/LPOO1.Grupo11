@@ -39,7 +39,7 @@ namespace ClasesBase
             int numeroVenta = (int)cmd.ExecuteScalar();
             cnn.Close();
 
-            // Utiliza el número de venta como necesites
+            //Devuelve el número de Venta
             return numeroVenta+1;
         }
 
@@ -95,13 +95,70 @@ namespace ClasesBase
 
             cmd.Parameters.AddWithValue("@id", venta.ClienteId);
   
-
-            // Ejecuta la consulta
             cnn.Open();
             int filasAfectadas = cmd.ExecuteNonQuery();
             cnn.Close();
 
             
+        }
+
+        //Busca Venta por id de cliente
+        public static DataTable buscarVenta(int id)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "Select";
+            cmd.CommandText += " Ven_Nro as 'Venta Número',";
+            cmd.CommandText += " Ven_Fecha as 'Fecha',";
+            cmd.CommandText += " Cli_Id as 'IdCliente'";
+
+            cmd.CommandText += " FROM Venta";
+            cmd.CommandText += " WHERE Cli_Id LIKE @id";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            //Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        //Busca una Venta entre dos Fechas
+        public static DataTable buscarVentaFecha(DateTime fechaInicio, DateTime fechaFin)
+        {
+            fechaInicio = fechaInicio.AddDays(-1);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "Select";
+            cmd.CommandText += " Ven_Nro as 'Venta Número',";
+            cmd.CommandText += " Ven_Fecha as 'Fecha',";
+            cmd.CommandText += " Cli_Id as 'IdCliente'";
+
+            cmd.CommandText += " FROM Venta";
+            cmd.CommandText += " WHERE Ven_Fecha >= @fechaInicio AND Ven_Fecha <= @fechaFin";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio);
+            cmd.Parameters.AddWithValue("@fechaFin", fechaFin);
+
+            //Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
         }
 
 

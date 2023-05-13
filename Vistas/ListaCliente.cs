@@ -44,14 +44,6 @@ namespace Vistas
 
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
         private void dgwCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgwCliente.CurrentRow != null)
@@ -108,14 +100,14 @@ namespace Vistas
             
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void btnOrdenarApellido_Click(object sender, EventArgs e)
         {
+            // Busca la columna "Apellido" en el DataGridView
+            DataGridViewColumn columnaApellido = dgwCliente.Columns["apellido"];
 
-        }
-
-        private void label8_Click_1(object sender, EventArgs e)
-        {
-
+            // Ordena el DataGridView por la columna "Apellido"
+            dgwCliente.Sort(columnaApellido, System.ComponentModel.ListSortDirection.Ascending);
+            
         }
         
 

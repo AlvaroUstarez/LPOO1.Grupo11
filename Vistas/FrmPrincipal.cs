@@ -26,7 +26,7 @@ namespace Vistas
 
         private void ingresarNuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_Cliente fAltaCliente = new Frm_Cliente();
+            Frm_AltaCliente fAltaCliente = new Frm_AltaCliente();
             this.Hide();
             fAltaCliente.Show();
             this.Close();
@@ -85,6 +85,21 @@ namespace Vistas
             FrmVentas formVenta = new FrmVentas();
             this.Hide();
             formVenta.Show();
+        }
+
+        private void listarVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListaVenta frmListaVenta = new FrmListaVenta();
+            this.Hide();
+            frmListaVenta.Show();
+        }
+
+        private void modificarProductosExistentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmModificarProducto frmModificarProducto = new FrmModificarProducto();
+            this.Hide();
+            frmModificarProducto.Show();
+            this.Close();
         }
 
 
