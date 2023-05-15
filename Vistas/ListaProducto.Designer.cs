@@ -33,19 +33,24 @@
             this.dgwProd = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalirP = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbtnDes = new System.Windows.Forms.RadioButton();
+            this.rbtnCategoria = new System.Windows.Forms.RadioButton();
+            this.rbtnPDef = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProd)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtBuscarProd
             // 
-            this.txtBuscarProd.Location = new System.Drawing.Point(92, 44);
+            this.txtBuscarProd.Location = new System.Drawing.Point(60, 44);
             this.txtBuscarProd.Name = "txtBuscarProd";
-            this.txtBuscarProd.Size = new System.Drawing.Size(420, 20);
+            this.txtBuscarProd.Size = new System.Drawing.Size(189, 20);
             this.txtBuscarProd.TabIndex = 0;
             // 
             // btnBuscarP
             // 
-            this.btnBuscarP.Location = new System.Drawing.Point(526, 42);
+            this.btnBuscarP.Location = new System.Drawing.Point(259, 42);
             this.btnBuscarP.Name = "btnBuscarP";
             this.btnBuscarP.Size = new System.Drawing.Size(97, 23);
             this.btnBuscarP.TabIndex = 1;
@@ -56,7 +61,7 @@
             // dgwProd
             // 
             this.dgwProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwProd.Location = new System.Drawing.Point(69, 88);
+            this.dgwProd.Location = new System.Drawing.Point(60, 84);
             this.dgwProd.Name = "dgwProd";
             this.dgwProd.Size = new System.Drawing.Size(554, 267);
             this.dgwProd.TabIndex = 2;
@@ -80,11 +85,60 @@
             this.btnSalirP.UseVisualStyleBackColor = true;
             this.btnSalirP.Click += new System.EventHandler(this.btnSalirP_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbtnPDef);
+            this.groupBox1.Controls.Add(this.rbtnCategoria);
+            this.groupBox1.Controls.Add(this.rbtnDes);
+            this.groupBox1.Location = new System.Drawing.Point(362, 34);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(304, 44);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ordenar por:";
+            // 
+            // rbtnDes
+            // 
+            this.rbtnDes.AutoSize = true;
+            this.rbtnDes.Location = new System.Drawing.Point(25, 19);
+            this.rbtnDes.Name = "rbtnDes";
+            this.rbtnDes.Size = new System.Drawing.Size(81, 17);
+            this.rbtnDes.TabIndex = 0;
+            this.rbtnDes.TabStop = true;
+            this.rbtnDes.Text = "Descripcion";
+            this.rbtnDes.UseVisualStyleBackColor = true;
+            this.rbtnDes.CheckedChanged += new System.EventHandler(this.rbtnDes_CheckedChanged);
+            // 
+            // rbtnCategoria
+            // 
+            this.rbtnCategoria.AutoSize = true;
+            this.rbtnCategoria.Location = new System.Drawing.Point(123, 19);
+            this.rbtnCategoria.Name = "rbtnCategoria";
+            this.rbtnCategoria.Size = new System.Drawing.Size(70, 17);
+            this.rbtnCategoria.TabIndex = 1;
+            this.rbtnCategoria.TabStop = true;
+            this.rbtnCategoria.Text = "Categoria";
+            this.rbtnCategoria.UseVisualStyleBackColor = true;
+            this.rbtnCategoria.CheckedChanged += new System.EventHandler(this.rbtnCategoria_CheckedChanged);
+            // 
+            // rbtnPDef
+            // 
+            this.rbtnPDef.AutoSize = true;
+            this.rbtnPDef.Location = new System.Drawing.Point(213, 19);
+            this.rbtnPDef.Name = "rbtnPDef";
+            this.rbtnPDef.Size = new System.Drawing.Size(82, 17);
+            this.rbtnPDef.TabIndex = 2;
+            this.rbtnPDef.TabStop = true;
+            this.rbtnPDef.Text = "Por Defecto";
+            this.rbtnPDef.UseVisualStyleBackColor = true;
+            this.rbtnPDef.CheckedChanged += new System.EventHandler(this.rbtnPDef_CheckedChanged);
+            // 
             // ListaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(678, 480);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalirP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgwProd);
@@ -93,6 +147,8 @@
             this.Name = "ListaProducto";
             this.Text = "ListaProducto";
             ((System.ComponentModel.ISupportInitialize)(this.dgwProd)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,5 +161,9 @@
         private System.Windows.Forms.DataGridView dgwProd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalirP;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbtnCategoria;
+        private System.Windows.Forms.RadioButton rbtnDes;
+        private System.Windows.Forms.RadioButton rbtnPDef;
     }
 }

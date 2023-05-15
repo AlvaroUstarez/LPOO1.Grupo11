@@ -103,5 +103,14 @@ namespace Vistas
         }
 
 
+        private void ventaProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ListaVentasProducto frmListaVentasProductos = new Frm_ListaVentasProducto();
+            this.Hide();
+            frmListaVentasProductos.Show();
+        }
+
+
+
     }
 }
