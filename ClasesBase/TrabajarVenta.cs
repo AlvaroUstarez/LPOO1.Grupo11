@@ -109,7 +109,7 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "Select";
-            cmd.CommandText += " Ven_Nro as 'Venta Número',";
+            cmd.CommandText += " Ven_Nro as 'Venta Numero',";
             cmd.CommandText += " Ven_Fecha as 'Fecha',";
             cmd.CommandText += " Cli_Id as 'IdCliente'";
 
@@ -130,6 +130,25 @@ namespace ClasesBase
             return dt;
         }
 
+        public static DataTable mostrarTablaVentaDetalle()
+        {
+
+            // Crear una conexión a la base de datos
+            SqlConnection connection = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            // Crear un objeto SqlDataAdapter
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM VentaDetalle", connection);
+
+            // Crear un objeto DataTable
+            DataTable dataTable = new DataTable();
+
+            // Llenar el DataTable con los datos de la tabla SQL
+            dataAdapter.Fill(dataTable);
+
+            return dataTable;
+        }
+
+
         //Busca una Venta entre dos Fechas
         public static DataTable buscarVentaFecha(DateTime fechaInicio, DateTime fechaFin)
         {
@@ -138,7 +157,7 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "Select";
-            cmd.CommandText += " Ven_Nro as 'Venta Número',";
+            cmd.CommandText += " Ven_Nro as 'Venta Numero',";
             cmd.CommandText += " Ven_Fecha as 'Fecha',";
             cmd.CommandText += " Cli_Id as 'IdCliente'";
 
