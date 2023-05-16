@@ -6,10 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-<<<<<<< HEAD
-=======
 using ClasesBase;
->>>>>>> dr-da
 
 namespace Vistas
 {
@@ -19,8 +16,6 @@ namespace Vistas
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-=======
 
         private void btnAceptarLogin_Click(object sender, EventArgs e)
         {
@@ -71,6 +66,5 @@ namespace Vistas
         }
 
 
->>>>>>> dr-da
     }
 }

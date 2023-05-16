@@ -75,7 +75,6 @@
             this.dgwUsuarios.Name = "dgwUsuarios";
             this.dgwUsuarios.Size = new System.Drawing.Size(532, 242);
             this.dgwUsuarios.TabIndex = 3;
-            this.dgwUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwUsuarios_CellContentClick);
             // 
             // groupBox1
             // 
