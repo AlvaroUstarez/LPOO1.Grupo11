@@ -28,12 +28,20 @@ namespace ClasesBase
             get { return usu_Contraseña; }
             set { usu_Contraseña = value; }
         }
-        private string usu_ApellidoNombre;
+        private string usu_Apellido;
 
-        public string Usu_ApellidoNombre
+        public string Usu_Apellido
         {
-            get { return usu_ApellidoNombre; }
-            set { usu_ApellidoNombre = value; }
+            get { return usu_Apellido; }
+            set { usu_Apellido = value; }
+        }
+
+        private string usu_Nombre;
+
+        public string Usu_Nombre
+        {
+            get { return usu_Nombre; }
+            set { usu_Nombre = value; }
         }
 
         private string usu_Email;

@@ -207,6 +207,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmModificarProducto";
             this.Text = "FrmModificarProducto";
+            this.Load += new System.EventHandler(this.FrmModificarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwProductos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -36,6 +36,11 @@ namespace Vistas
             dgwCliente.DataSource = TrabajarCliente.list_clientes();
         }
 
+        private void load_clientes_apellido()
+        {
+            dgwCliente.DataSource = TrabajarCliente.list_clientes_apellido_sp();
+        }
+
         private void btnClienteSalir_Click(object sender, EventArgs e)
         {
             FrmPrincipal fPrincipal = new FrmPrincipal();
@@ -102,12 +107,7 @@ namespace Vistas
 
         private void btnOrdenarApellido_Click(object sender, EventArgs e)
         {
-            // Busca la columna "Apellido" en el DataGridView
-            DataGridViewColumn columnaApellido = dgwCliente.Columns["apellido"];
-
-            // Ordena el DataGridView por la columna "Apellido"
-            dgwCliente.Sort(columnaApellido, System.ComponentModel.ListSortDirection.Ascending);
-            
+            load_clientes_apellido();            
         }
         
 

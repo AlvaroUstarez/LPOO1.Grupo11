@@ -18,6 +18,11 @@ namespace Vistas
             InitializeComponent();
         }
 
+        private void FrmModificarProducto_Load(object sender, EventArgs e)
+        {
+            load_productos();
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (txtBuscar.Text != "")
@@ -41,6 +46,8 @@ namespace Vistas
             this.Hide();
             fPrincipal.Show();
         }
+
+        
 
     }
 }

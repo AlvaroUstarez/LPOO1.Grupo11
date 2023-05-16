@@ -134,6 +134,7 @@
             this.Controls.Add(this.btnBuscarVenta);
             this.Name = "FrmListaVenta";
             this.Text = "ListarVenta";
+            this.Load += new System.EventHandler(this.FrmListaVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwListaVenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

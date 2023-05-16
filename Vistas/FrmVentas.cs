@@ -16,17 +16,15 @@ namespace Vistas
 
         public FrmVentas()
         {
-            DateTimePicker fecha = dtpFechaVenta; 
             InitializeComponent();
-            load_product();
-
-            //TODO
-            load_venta();
+            DateTimePicker fecha = dtpFechaVenta;        
         }
 
         private void FrmVentas_Load(object sender, EventArgs e)
         {
+            load_venta();
             load_usuers();
+            load_product();
         }
 
         private void load_product()

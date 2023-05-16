@@ -14,8 +14,10 @@ namespace Vistas
         public FrmListaVenta()
         {
             InitializeComponent();
+        }
+        private void FrmListaVenta_Load(object sender, EventArgs e)
+        {
             load_usuers();
-            
         }
 
         private void load_usuers()
@@ -56,6 +58,8 @@ namespace Vistas
             this.Hide();
             fPrincipal.Show();
         }
+
+        
 
         
     }
