@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+    <Compile Include="VentaDetalle.cs" />
     <Compile Include="ObraSocial.cs" />
     <Compile Include="opticaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -55,7 +56,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Rol.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="TrabajarCliente.cs" />
+    <Compile Include="TrabajarObraSocial.cs" />
+    <Compile Include="TrabajarProducto.cs" />
+    <Compile Include="TrabajarUsuario.cs" />
+    <Compile Include="TrabajarVenta.cs" />
+>>>>>>> dr-da
     <Compile Include="Usuario.cs" />
+    <Compile Include="Venta.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

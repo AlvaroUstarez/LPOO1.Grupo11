@@ -46,14 +46,121 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmModificarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmModificarProducto.Designer.cs">
+      <DependentUpon>FrmModificarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentas.Designer.cs">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_AltaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AltaCliente.designer.cs">
+      <DependentUpon>Frm_AltaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ListaVentasProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ListaVentasProducto.Designer.cs">
+      <DependentUpon>Frm_ListaVentasProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ObraSocial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ObraSocial.designer.cs">
+      <DependentUpon>Frm_ObraSocial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Producto.designer.cs">
+      <DependentUpon>Frm_Producto.cs</DependentUpon>
+    </Compile>
+<<<<<<< HEAD
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+=======
+    <Compile Include="Frm_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Frm_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaCliente.Designer.cs">
+      <DependentUpon>ListaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaProducto.Designer.cs">
+      <DependentUpon>ListaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaVenta.Designer.cs">
+      <DependentUpon>FrmListaVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmModificarProducto.resx">
+      <DependentUpon>FrmModificarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVentas.resx">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_AltaCliente.resx">
+      <DependentUpon>Frm_AltaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ListaVentasProducto.resx">
+      <DependentUpon>Frm_ListaVentasProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ObraSocial.resx">
+      <DependentUpon>Frm_ObraSocial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Producto.resx">
+      <DependentUpon>Frm_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_User.resx">
+      <DependentUpon>Frm_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaCliente.resx">
+      <DependentUpon>ListaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaProducto.resx">
+      <DependentUpon>ListaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaVenta.resx">
+      <DependentUpon>FrmListaVenta.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> dr-da
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +169,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +186,9 @@
       <Project>{D2CAC91B-E4EA-431E-A9A0-9705190D1D0A}</Project>
       <Name>ClasesBase</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

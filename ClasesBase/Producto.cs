@@ -5,11 +5,12 @@ using System.Text;
 
 namespace ClasesBase
 {
-    class Producto
+    public class Producto
     {
-        private string prod_Codigo;
 
-        public string Prod_Codigo
+        private int prod_Codigo;
+
+        public int Prod_Codigo
         {
             get { return prod_Codigo; }
             set { prod_Codigo = value; }

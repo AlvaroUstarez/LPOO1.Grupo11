@@ -28,21 +28,48 @@ namespace ClasesBase
             get { return usu_Contraseña; }
             set { usu_Contraseña = value; }
         }
-        private string usu_ApellidoNombre;
+        private string usu_Apellido;
 
-        public string Usu_ApellidoNombre
+        public string Usu_Apellido
         {
-            get { return usu_ApellidoNombre; }
-            set { usu_ApellidoNombre = value; }
+            get { return usu_Apellido; }
+            set { usu_Apellido = value; }
         }
 
-        private Rol rol_Id;
+        private string usu_Nombre;
 
-        internal Rol Rol_Id
+        public string Usu_Nombre
         {
-            get { return rol_Id; }
-            set { rol_Id = value; }
+            get { return usu_Nombre; }
+            set { usu_Nombre = value; }
         }
+
+        private string usu_Email;
+
+        public string Usu_Email
+        {
+            get { return usu_Email; }
+            set { usu_Email = value; }
+        }
+
+        private int rol_Codigo;
+
+        public int Rol_Codigo
+        {
+            get { return rol_Codigo; }
+            set { rol_Codigo = value; }
+        }
+
+        public Usuario(String nombreUsuario, String password)
+        {
+            usu_NombreUsuario = nombreUsuario;
+            usu_Contraseña = password;
+        }
+
+        public Usuario()
+        {
+        }
+
     }
 
 }
