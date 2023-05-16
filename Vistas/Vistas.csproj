@@ -76,6 +76,12 @@
     <Compile Include="FrmPrincipal.designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_ListaVentasProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ListaVentasProducto.Designer.cs">
+      <DependentUpon>Frm_ListaVentasProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_ObraSocial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ListaVentasProducto.resx">
+      <DependentUpon>Frm_ListaVentasProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ObraSocial.resx">
       <DependentUpon>Frm_ObraSocial.cs</DependentUpon>

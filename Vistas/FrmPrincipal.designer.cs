@@ -44,6 +44,7 @@
             this.agregarVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.ventaProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,7 +149,8 @@
             // 
             this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarVentaToolStripMenuItem,
-            this.listarVentasToolStripMenuItem});
+            this.listarVentasToolStripMenuItem,
+            this.ventaProductoToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ventasToolStripMenuItem.Text = "Ventas";
@@ -156,14 +158,14 @@
             // agregarVentaToolStripMenuItem
             // 
             this.agregarVentaToolStripMenuItem.Name = "agregarVentaToolStripMenuItem";
-            this.agregarVentaToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.agregarVentaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.agregarVentaToolStripMenuItem.Text = "Agregar Venta";
             this.agregarVentaToolStripMenuItem.Click += new System.EventHandler(this.agregarVentaToolStripMenuItem_Click);
             // 
             // listarVentasToolStripMenuItem
             // 
             this.listarVentasToolStripMenuItem.Name = "listarVentasToolStripMenuItem";
-            this.listarVentasToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.listarVentasToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.listarVentasToolStripMenuItem.Text = "Listar Ventas";
             this.listarVentasToolStripMenuItem.Click += new System.EventHandler(this.listarVentasToolStripMenuItem_Click);
             // 
@@ -176,6 +178,13 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // ventaProductoToolStripMenuItem
+            // 
+            this.ventaProductoToolStripMenuItem.Name = "ventaProductoToolStripMenuItem";
+            this.ventaProductoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.ventaProductoToolStripMenuItem.Text = "Venta Producto";
+            this.ventaProductoToolStripMenuItem.Click += new System.EventHandler(this.ventaProductoToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -213,5 +222,6 @@
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventaProductoToolStripMenuItem;
     }
 }
