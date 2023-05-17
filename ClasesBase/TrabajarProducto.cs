@@ -107,5 +107,24 @@ namespace ClasesBase
 
             return dt;
         }
+
+        public static void modificarProductoSP(int id, Producto producto)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "modificar_producto_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@categoria", producto.Prod_Categoria);
+            cmd.Parameters.AddWithValue("@descripcion", producto.Prod_Descripcion);
+            cmd.Parameters.AddWithValue("@precio", producto.Prod_Precio);
+
+            // Ejecuta la consulta
+            cnn.Open();
+            int filasAfectadas = cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace Vistas
         public ListaCliente()
         {
             InitializeComponent();
-            load_clientes();
+            load_clientes_sp();
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -27,13 +27,13 @@ namespace Vistas
             }
             else
             {
-                load_clientes();
+                load_clientes_sp();
             }
         }
 
-        private void load_clientes()
+        private void load_clientes_sp()
         {
-            dgwCliente.DataSource = TrabajarCliente.list_clientes();
+            dgwCliente.DataSource = TrabajarCliente.list_clientes_sp();
         }
 
         private void load_clientes_apellido()
@@ -85,7 +85,7 @@ namespace Vistas
                 oCliente.OS_CUIT = txtCuitOS.Text;
                 TrabajarCliente.modificar_Cliente( int.Parse(txtIdCliente.Text), oCliente);
 
-                load_clientes();
+                load_clientes_sp();
                 limpiarCampos();
 
 

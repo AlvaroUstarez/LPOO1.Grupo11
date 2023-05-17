@@ -39,16 +39,16 @@ namespace Vistas
         private void btnBuscarVenta_Click(object sender, EventArgs e)
         {
             int idcliente = int.Parse(cmbListaClientes.SelectedValue.ToString());
-            TrabajarVenta.buscarVenta(idcliente);
+            TrabajarVenta.buscar_venta_cliente_sp(idcliente);
 
-            dgwListaVenta.DataSource = TrabajarVenta.buscarVenta(idcliente);
+            dgwListaVenta.DataSource = TrabajarVenta.buscar_venta_cliente_sp(idcliente);
 
         }
 
         //Buscar Venta por fecha
         private void btnBuscarFecha_Click(object sender, EventArgs e)
         {
-            dgwListaVenta.DataSource = TrabajarVenta.buscarVentaFecha(dtpFechaInicio.Value , dtpFechaFin.Value);
+            dgwListaVenta.DataSource = TrabajarVenta.buscarVentaFechaSP(dtpFechaInicio.Value , dtpFechaFin.Value);
         }
 
 

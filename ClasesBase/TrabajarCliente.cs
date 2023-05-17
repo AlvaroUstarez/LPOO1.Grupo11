@@ -33,23 +33,15 @@ namespace ClasesBase
 
         }
 
-        public static DataTable list_clientes()
+
+        public static DataTable list_clientes_sp()
         {
 
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "Select";
-            cmd.CommandText += " Cli_Id as 'id',";
-            cmd.CommandText += " Cli_DNI as 'dni',";
-            cmd.CommandText += " Cli_Apellido as 'apellido',";
-            cmd.CommandText += " Cli_Nombre as 'nombre',";
-            cmd.CommandText += " Cli_Direccion as 'direccion',";
-            cmd.CommandText += " Cli_NroCarnet as 'carnet',";
-            cmd.CommandText += " C.OS_CUIT as 'cuit',";
-            cmd.CommandText += " Cli_NroCarnet as 'carnet'";
-            cmd.CommandText += " FROM Cliente as C LEFT JOIN ObraSocial as OS ON (OS.OS_CUIT = C.OS_CUIT)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "listar_cliente_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             //Ejecuta la consulta

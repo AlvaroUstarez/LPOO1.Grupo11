@@ -40,8 +40,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.txtDescripción = new System.Windows.Forms.TextBox();
-            this.txtCategoría = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProductos)).BeginInit();
@@ -64,6 +64,7 @@
             this.dgwProductos.Name = "dgwProductos";
             this.dgwProductos.Size = new System.Drawing.Size(328, 221);
             this.dgwProductos.TabIndex = 1;
+            this.dgwProductos.CurrentCellChanged += new System.EventHandler(this.dgwProductos_CurrentCellChanged);
             // 
             // txtBuscar
             // 
@@ -99,8 +100,8 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.txtPrecio);
-            this.groupBox1.Controls.Add(this.txtDescripción);
-            this.groupBox1.Controls.Add(this.txtCategoría);
+            this.groupBox1.Controls.Add(this.txtDescripcion);
+            this.groupBox1.Controls.Add(this.txtCategoria);
             this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Location = new System.Drawing.Point(359, 91);
             this.groupBox1.Name = "groupBox1";
@@ -153,6 +154,7 @@
             this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // txtPrecio
             // 
@@ -161,19 +163,19 @@
             this.txtPrecio.Size = new System.Drawing.Size(144, 20);
             this.txtPrecio.TabIndex = 4;
             // 
-            // txtDescripción
+            // txtDescripcion
             // 
-            this.txtDescripción.Location = new System.Drawing.Point(122, 96);
-            this.txtDescripción.Name = "txtDescripción";
-            this.txtDescripción.Size = new System.Drawing.Size(144, 20);
-            this.txtDescripción.TabIndex = 2;
+            this.txtDescripcion.Location = new System.Drawing.Point(122, 96);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(144, 20);
+            this.txtDescripcion.TabIndex = 2;
             // 
-            // txtCategoría
+            // txtCategoria
             // 
-            this.txtCategoría.Location = new System.Drawing.Point(122, 58);
-            this.txtCategoría.Name = "txtCategoría";
-            this.txtCategoría.Size = new System.Drawing.Size(144, 20);
-            this.txtCategoría.TabIndex = 1;
+            this.txtCategoria.Location = new System.Drawing.Point(122, 58);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(144, 20);
+            this.txtCategoria.TabIndex = 1;
             // 
             // txtCodigo
             // 
@@ -225,14 +227,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.TextBox txtCategoría;
+        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.TextBox txtDescripción;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnVolver;
     }
 }

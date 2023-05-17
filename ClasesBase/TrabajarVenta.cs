@@ -23,10 +23,7 @@ namespace ClasesBase
             return detallesVenta;
         }
 
-        //TODO Agregar venta al iniciar el formulario
-        /**Se agrega la vanta a la bd para obtener el numero de venta,
-         * Luege se agregan los detalles con el numero de venta
-         */
+        //Obtiene el número de venta para guardar en la bd
         public static int iniciar_venta()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
@@ -103,19 +100,14 @@ namespace ClasesBase
         }
 
         //Busca Venta por id de cliente
-        public static DataTable buscarVenta(int id)
+        public static DataTable buscar_venta_cliente_sp(int id)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "Select";
-            cmd.CommandText += " Ven_Nro as 'Venta Numero',";
-            cmd.CommandText += " Ven_Fecha as 'Fecha',";
-            cmd.CommandText += " Cli_Id as 'IdCliente'";
+            cmd.CommandText = "buscar_venta_cliente_sp";
 
-            cmd.CommandText += " FROM Venta";
-            cmd.CommandText += " WHERE Cli_Id LIKE @id";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@id", id);
@@ -150,21 +142,16 @@ namespace ClasesBase
 
 
         //Busca una Venta entre dos Fechas
-        public static DataTable buscarVentaFecha(DateTime fechaInicio, DateTime fechaFin)
+        public static DataTable buscarVentaFechaSP(DateTime fechaInicio, DateTime fechaFin)
         {
             fechaInicio = fechaInicio.AddDays(-1);
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "Select";
-            cmd.CommandText += " Ven_Nro as 'Venta Numero',";
-            cmd.CommandText += " Ven_Fecha as 'Fecha',";
-            cmd.CommandText += " Cli_Id as 'IdCliente'";
+            cmd.CommandText = "buscar_venta_fechas_sp";
 
-            cmd.CommandText += " FROM Venta";
-            cmd.CommandText += " WHERE Ven_Fecha >= @fechaInicio AND Ven_Fecha <= @fechaFin";
 
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio);

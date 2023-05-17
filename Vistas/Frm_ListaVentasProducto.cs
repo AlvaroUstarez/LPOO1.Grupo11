@@ -36,7 +36,7 @@ namespace Vistas
         private void btnBuscarVentaProducto_Click(object sender, EventArgs e)
         {
             int idcliente = int.Parse(cmbListaClientesProd.SelectedValue.ToString());
-            DataTable dt2 = TrabajarVenta.buscarVenta(idcliente);
+            DataTable dt2 = TrabajarVenta.buscar_venta_cliente_sp(idcliente);
             DataTable dt1 = TrabajarVenta.mostrarTablaVentaDetalle();
 
 
