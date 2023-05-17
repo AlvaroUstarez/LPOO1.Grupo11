@@ -110,6 +110,14 @@ namespace Vistas
             frmListaVentasProductos.Show();
         }
 
+        private void eliminarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEliminarProducto frmEliminarProducto = new FrmEliminarProducto();
+            this.Hide();
+            frmEliminarProducto.Show();
+            this.Close();
+        }
+
 
 
     }

@@ -34,9 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalirP = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtnDes = new System.Windows.Forms.RadioButton();
-            this.rbtnCategoria = new System.Windows.Forms.RadioButton();
             this.rbtnPDef = new System.Windows.Forms.RadioButton();
+            this.rbtnCategoria = new System.Windows.Forms.RadioButton();
+            this.rbtnDes = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -69,11 +70,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(213, 18);
+            this.label1.Location = new System.Drawing.Point(61, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 13);
+            this.label1.Size = new System.Drawing.Size(93, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "INGRESE CODIGO DEL PRODUCTO";
+            this.label1.Text = "Buscar por código";
             // 
             // btnSalirP
             // 
@@ -97,17 +98,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ordenar por:";
             // 
-            // rbtnDes
+            // rbtnPDef
             // 
-            this.rbtnDes.AutoSize = true;
-            this.rbtnDes.Location = new System.Drawing.Point(25, 19);
-            this.rbtnDes.Name = "rbtnDes";
-            this.rbtnDes.Size = new System.Drawing.Size(81, 17);
-            this.rbtnDes.TabIndex = 0;
-            this.rbtnDes.TabStop = true;
-            this.rbtnDes.Text = "Descripcion";
-            this.rbtnDes.UseVisualStyleBackColor = true;
-            this.rbtnDes.CheckedChanged += new System.EventHandler(this.rbtnDes_CheckedChanged);
+            this.rbtnPDef.AutoSize = true;
+            this.rbtnPDef.Location = new System.Drawing.Point(213, 19);
+            this.rbtnPDef.Name = "rbtnPDef";
+            this.rbtnPDef.Size = new System.Drawing.Size(82, 17);
+            this.rbtnPDef.TabIndex = 2;
+            this.rbtnPDef.TabStop = true;
+            this.rbtnPDef.Text = "Por Defecto";
+            this.rbtnPDef.UseVisualStyleBackColor = true;
+            this.rbtnPDef.CheckedChanged += new System.EventHandler(this.rbtnPDef_CheckedChanged);
             // 
             // rbtnCategoria
             // 
@@ -121,23 +122,33 @@
             this.rbtnCategoria.UseVisualStyleBackColor = true;
             this.rbtnCategoria.CheckedChanged += new System.EventHandler(this.rbtnCategoria_CheckedChanged);
             // 
-            // rbtnPDef
+            // rbtnDes
             // 
-            this.rbtnPDef.AutoSize = true;
-            this.rbtnPDef.Location = new System.Drawing.Point(213, 19);
-            this.rbtnPDef.Name = "rbtnPDef";
-            this.rbtnPDef.Size = new System.Drawing.Size(82, 17);
-            this.rbtnPDef.TabIndex = 2;
-            this.rbtnPDef.TabStop = true;
-            this.rbtnPDef.Text = "Por Defecto";
-            this.rbtnPDef.UseVisualStyleBackColor = true;
-            this.rbtnPDef.CheckedChanged += new System.EventHandler(this.rbtnPDef_CheckedChanged);
+            this.rbtnDes.AutoSize = true;
+            this.rbtnDes.Location = new System.Drawing.Point(25, 19);
+            this.rbtnDes.Name = "rbtnDes";
+            this.rbtnDes.Size = new System.Drawing.Size(81, 17);
+            this.rbtnDes.TabIndex = 0;
+            this.rbtnDes.TabStop = true;
+            this.rbtnDes.Text = "Descripcion";
+            this.rbtnDes.UseVisualStyleBackColor = true;
+            this.rbtnDes.CheckedChanged += new System.EventHandler(this.rbtnDes_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(287, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "LISTAR PRODUCTOS";
             // 
             // ListaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(678, 480);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalirP);
             this.Controls.Add(this.label1);
@@ -165,5 +176,6 @@
         private System.Windows.Forms.RadioButton rbtnCategoria;
         private System.Windows.Forms.RadioButton rbtnDes;
         private System.Windows.Forms.RadioButton rbtnPDef;
+        private System.Windows.Forms.Label label2;
     }
 }

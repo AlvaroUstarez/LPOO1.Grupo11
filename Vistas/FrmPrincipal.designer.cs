@@ -43,8 +43,9 @@
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.ventaProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.eliminarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +75,8 @@
             this.productoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarNuevosProductosToolStripMenuItem,
             this.modificarProductosExistentesToolStripMenuItem,
-            this.listarProductoToolStripMenuItem});
+            this.listarProductoToolStripMenuItem,
+            this.eliminarProductoToolStripMenuItem});
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
             this.productoToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.productoToolStripMenuItem.Text = "Producto";
@@ -158,7 +160,7 @@
             // agregarVentaToolStripMenuItem
             // 
             this.agregarVentaToolStripMenuItem.Name = "agregarVentaToolStripMenuItem";
-            this.agregarVentaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.agregarVentaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.agregarVentaToolStripMenuItem.Text = "Agregar Venta";
             this.agregarVentaToolStripMenuItem.Click += new System.EventHandler(this.agregarVentaToolStripMenuItem_Click);
             // 
@@ -168,6 +170,13 @@
             this.listarVentasToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.listarVentasToolStripMenuItem.Text = "Listar Ventas";
             this.listarVentasToolStripMenuItem.Click += new System.EventHandler(this.listarVentasToolStripMenuItem_Click);
+            // 
+            // ventaProductoToolStripMenuItem
+            // 
+            this.ventaProductoToolStripMenuItem.Name = "ventaProductoToolStripMenuItem";
+            this.ventaProductoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.ventaProductoToolStripMenuItem.Text = "Venta Producto";
+            this.ventaProductoToolStripMenuItem.Click += new System.EventHandler(this.ventaProductoToolStripMenuItem_Click);
             // 
             // btnSalir
             // 
@@ -179,12 +188,12 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // ventaProductoToolStripMenuItem
+            // eliminarProductoToolStripMenuItem
             // 
-            this.ventaProductoToolStripMenuItem.Name = "ventaProductoToolStripMenuItem";
-            this.ventaProductoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.ventaProductoToolStripMenuItem.Text = "Venta Producto";
-            this.ventaProductoToolStripMenuItem.Click += new System.EventHandler(this.ventaProductoToolStripMenuItem_Click);
+            this.eliminarProductoToolStripMenuItem.Name = "eliminarProductoToolStripMenuItem";
+            this.eliminarProductoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.eliminarProductoToolStripMenuItem.Text = "Eliminar Producto";
+            this.eliminarProductoToolStripMenuItem.Click += new System.EventHandler(this.eliminarProductoToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -223,5 +232,6 @@
         private System.Windows.Forms.ToolStripMenuItem agregarVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventaProductoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarProductoToolStripMenuItem;
     }
 }

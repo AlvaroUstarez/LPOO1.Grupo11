@@ -15,13 +15,14 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Producto(Prod_Categoria, Prod_Descripcion, Prod_Precio) values(@prodcategoria, @prodescripcion, @prodprecio)";
+            cmd.CommandText = "INSERT INTO Producto(Prod_Categoria, Prod_Descripcion, Prod_Precio, Prod_Baja) values(@prodcategoria, @prodescripcion, @prodprecio, @baja)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@prodcategoria", product.Prod_Categoria);
             cmd.Parameters.AddWithValue("@prodescripcion", product.Prod_Descripcion);
             cmd.Parameters.AddWithValue("@prodprecio", product.Prod_Precio);
+            cmd.Parameters.AddWithValue("@baja", false);
 
             cnn.Open();
             cmd.ExecuteNonQuery();
@@ -41,6 +42,7 @@ namespace ClasesBase
             cmd.CommandText += " Prod_Precio as 'Precio'";
 
             cmd.CommandText += " FROM Producto as P";
+            cmd.CommandText += " WHERE Prod_Baja = 0";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
@@ -126,5 +128,23 @@ namespace ClasesBase
             int filasAfectadas = cmd.ExecuteNonQuery();
             cnn.Close();
         }
+
+        public static void darDeBajaProducto(int id)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "baja_producto_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@baja", true);
+
+            // Ejecuta la consulta
+            cnn.Open();
+            int filasAfectadas = cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
+
     }
 }
