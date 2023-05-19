@@ -167,6 +167,7 @@ namespace ClasesBase
         public static DataTable buscarVentaFechaSP(DateTime fechaInicio, DateTime fechaFin)
         {
             fechaInicio = fechaInicio.AddDays(-1);
+            fechaFin = fechaFin.AddDays(+1);
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
@@ -192,6 +193,7 @@ namespace ClasesBase
         public static DataTable buscarVentaFechaProducto(DateTime fechaInicio, DateTime fechaFin)
         {
             fechaInicio = fechaInicio.AddDays(-1);
+            fechaFin = fechaFin.AddDays(+1);
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
