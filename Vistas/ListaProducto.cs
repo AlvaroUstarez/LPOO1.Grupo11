@@ -44,44 +44,22 @@ namespace Vistas
 
         private void rbtnDes_CheckedChanged(object sender, EventArgs e)
         {
-            DataTable dt = TrabajarProducto.listar_product();
+            DataTable dt = TrabajarProducto.listar_producto_x_descripcion();
 
-
-            // Obtener el nombre de la columna por la cual se desea ordenar
-            string nombreColumna = "Descripcion";
-
-            // Ordenar el DataTable
-            dt.DefaultView.Sort = nombreColumna + " ASC";
-
-            // Actualizar el DataGridView con los datos ordenados
             dgwProd.DataSource = dt;
         }
 
         private void rbtnCategoria_CheckedChanged(object sender, EventArgs e)
         {
-            DataTable dt = TrabajarProducto.listar_product();
+            DataTable dt = TrabajarProducto.listar_producto_x_categoria();
 
-            // Obtener el nombre de la columna por la cual se desea ordenar
-            string nombreColumna = "Categoria";
-
-            // Ordenar el DataTable
-            dt.DefaultView.Sort = nombreColumna + " ASC";
-
-            // Actualizar el DataGridView con los datos ordenados
             dgwProd.DataSource = dt;
         }
 
         private void rbtnPDef_CheckedChanged(object sender, EventArgs e)
         {
-            DataTable dt = TrabajarProducto.listar_product();
+            DataTable dt = TrabajarProducto.listar_producto_x_defecto();
 
-            // Obtener el nombre de la columna por la cual se desea ordenar
-            string nombreColumna = "Codigo";
-
-            // Ordenar el DataTable
-            dt.DefaultView.Sort = nombreColumna + " ASC";
-
-            // Actualizar el DataGridView con los datos ordenados
             dgwProd.DataSource = dt;
         }
 

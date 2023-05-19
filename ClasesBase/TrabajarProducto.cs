@@ -56,6 +56,72 @@ namespace ClasesBase
             return dt;
         }
 
+        public static DataTable listar_producto_x_categoria()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Prod_Codigo, Prod_Categoria, Prod_Descripcion, Prod_Precio";
+            cmd.CommandText += " FROM Producto";
+            cmd.CommandText += " WHERE Prod_Baja = 0";
+            cmd.CommandText += " ORDER BY Prod_Categoria ASC";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            // Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            // Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable listar_producto_x_descripcion()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Prod_Codigo, Prod_Categoria, Prod_Descripcion, Prod_Precio";
+            cmd.CommandText += " FROM Producto";
+            cmd.CommandText += " WHERE Prod_Baja = 0";  // Filtrar los productos que no tienen marcada la columna "Prod_Baja"
+            cmd.CommandText += " ORDER BY Prod_Descripcion ASC";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            // Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            // Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable listar_producto_x_defecto()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Prod_Codigo, Prod_Categoria, Prod_Descripcion, Prod_Precio";
+            cmd.CommandText += " FROM Producto";
+            cmd.CommandText += " WHERE Prod_Baja = 0";
+            cmd.CommandText += " ORDER BY Prod_Codigo ASC";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            // Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            // Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
         public static DataTable search_producto(int codigo)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);

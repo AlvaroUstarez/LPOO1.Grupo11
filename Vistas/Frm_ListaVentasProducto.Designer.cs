@@ -48,6 +48,7 @@
             this.btnBuscarFechaPro.TabIndex = 23;
             this.btnBuscarFechaPro.Text = "BUSCAR";
             this.btnBuscarFechaPro.UseVisualStyleBackColor = true;
+            this.btnBuscarFechaPro.Click += new System.EventHandler(this.btnBuscarFechaPro_Click);
             // 
             // dtpFechaFinPro
             // 

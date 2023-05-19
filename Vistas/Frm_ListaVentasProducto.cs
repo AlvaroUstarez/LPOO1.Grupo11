@@ -36,25 +36,7 @@ namespace Vistas
         private void btnBuscarVentaProducto_Click(object sender, EventArgs e)
         {
             int idcliente = int.Parse(cmbListaClientesProd.SelectedValue.ToString());
-            DataTable dt2 = TrabajarVenta.buscar_venta_cliente_sp(idcliente);
-            DataTable dt1 = TrabajarVenta.mostrarTablaVentaDetalle();
-
-
-            // Obtener los valores de la columna "columna2" de dt2
-            List<int> valoresColumna2 = dt2.AsEnumerable()
-                                            .Select(row => row.Field<int>("Venta Numero"))
-                                            .ToList();
-
-            // Filtrar las filas de dt1 que tienen un valor en la columna "columna1"
-            // que coincide con los valores de la columna "columna2" de dt2
-            DataTable dtResult = dt1.AsEnumerable()
-                                    .Where(row => valoresColumna2.Contains(row.Field<int>("Ven_Nro")))
-                                    .CopyToDataTable();
-
-
-            dgwListaVentaProducto.DataSource = dtResult;
-
-            
+            dgwListaVentaProducto.DataSource = TrabajarVenta.buscar_venta_x_cliente_producto(idcliente);
             
         }
 
@@ -63,6 +45,11 @@ namespace Vistas
             FrmPrincipal fPrincipal = new FrmPrincipal();
             this.Hide();
             fPrincipal.Show();
+        }
+
+        private void btnBuscarFechaPro_Click(object sender, EventArgs e)
+        {
+            dgwListaVentaProducto.DataSource = TrabajarVenta.buscarVentaFechaProducto(dtpFechaInicioPro.Value, dtpFechaFinPro.Value);
         }
 
     }

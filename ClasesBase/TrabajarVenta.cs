@@ -122,6 +122,28 @@ namespace ClasesBase
             return dt;
         }
 
+        public static DataTable buscar_venta_x_cliente_producto(int idCliente)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "buscar_venta_x_cliente_producto";
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@idCliente", idCliente);
+
+            //Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
         public static DataTable mostrarTablaVentaDetalle()
         {
 
@@ -166,6 +188,32 @@ namespace ClasesBase
 
             return dt;
         }
+
+        public static DataTable buscarVentaFechaProducto(DateTime fechaInicio, DateTime fechaFin)
+        {
+            fechaInicio = fechaInicio.AddDays(-1);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "buscar_venta_producto_x_fechas";
+
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio);
+            cmd.Parameters.AddWithValue("@fechaFin", fechaFin);
+
+            //Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
 
 
 
