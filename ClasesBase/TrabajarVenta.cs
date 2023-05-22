@@ -99,6 +99,34 @@ namespace ClasesBase
             
         }
 
+        public static DataTable list_ventas_sp()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText += "listar_ventas_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            //Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+
+
+            //Crear el data set
+            DataSet ds = new DataSet();
+
+            //Cargar el data set con el data adapter
+            da.Fill(ds);
+
+            //Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+
         //Busca Venta por id de cliente
         public static DataTable buscar_venta_cliente_sp(int id)
         {
@@ -166,8 +194,7 @@ namespace ClasesBase
         //Busca una Venta entre dos Fechas
         public static DataTable buscarVentaFechaSP(DateTime fechaInicio, DateTime fechaFin)
         {
-            fechaInicio = fechaInicio.AddDays(-1);
-            fechaFin = fechaFin.AddDays(+1);
+            fechaFin = fechaFin.AddDays(1).AddSeconds(-1);//final del día
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
@@ -192,8 +219,7 @@ namespace ClasesBase
 
         public static DataTable buscarVentaFechaProducto(DateTime fechaInicio, DateTime fechaFin)
         {
-            fechaInicio = fechaInicio.AddDays(-1);
-            fechaFin = fechaFin.AddDays(+1);
+            fechaFin = fechaFin.AddDays(1).AddSeconds(-1);//Final del día
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();

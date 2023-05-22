@@ -18,6 +18,12 @@ namespace Vistas
         private void FrmListaVenta_Load(object sender, EventArgs e)
         {
             load_usuers();
+            listar_ventas_sp();
+        }
+
+        private void listar_ventas_sp()
+        {
+            dgwListaVenta.DataSource = TrabajarVenta.list_ventas_sp();
         }
 
         private void load_usuers()
